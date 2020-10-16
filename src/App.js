@@ -1,0 +1,68 @@
+import React, {Component} from 'react';
+import './App.css';
+
+import WeatherForm from './components/WeatherForm';
+import Weather from './components/Weather';
+import { WEATHER_KEY } from './app/Keys';
+
+class  App extends Component{
+
+  state = {
+    temperature: '',
+    description: '',
+    humidity: '',
+    wind_speed: 0,
+    city: '',
+    country: '',
+    error: null
+};
+
+getWeather = async (e) => {
+    e.preventDefault();
+    const { city, country } = e.target.elements;
+    const cityValue = city.value;
+    const countryValue = country.value;
+
+    if (cityValue && countryValue) {
+        // metric parameter is for Celcius Unit
+        const API_URL_1 = `http://api.openweathermap.org/data/2.5/forecast/daily?q=London&cnt=7&appid=${WEATHER_KEY}&units=metric`;
+        const API_URL = `https://api.openweathermap.org/data/2.5/weather?q=${cityValue},${countryValue}&cnt=7&appid=${WEATHER_KEY}&units=metric`;
+        const response = await fetch(API_URL);
+        const data = await response.json();
+
+        const res = await fetch(API_URL_1);
+        const data1 = await res.json();
+        console.log(data)
+
+        this.setState({
+            temperature: data.main.temp,
+            description: data.weather[0].description,
+            humidity: data.main.humidity,
+            wind_speed: data.wind.speed,
+            city: data.name,
+            country: data.sys.country,
+            error: null
+        });
+    } else {
+        this.setState({
+            error: 'Please enter a City and a Country.'
+        });
+    }
+
+}
+render() {
+  return <div className="container p-4">
+    <div className="row">
+        <div className="col-md-6 mx-auto">
+            <WeatherForm
+                getWeather={this.getWeather}
+            />
+            <Weather {...this.state} />
+        </div>
+    </div>
+  </div>
+   
+  }
+}
+
+export default App;
