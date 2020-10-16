@@ -26,7 +26,7 @@ getWeather = async (e) => {
     if (cityValue && countryValue) {
         // metric parameter is for Celcius Unit
         const API_URL_1 = `http://api.openweathermap.org/data/2.5/forecast/daily?q=London&cnt=7&appid=${WEATHER_KEY}&units=metric`;
-        const API_URL = `https://api.openweathermap.org/data/2.5/weather?q=${cityValue},${countryValue}&appid=${WEATHER_KEY}&units=metric`;
+        const API_URL = `https://cors-anywhere.herokuapp.com/https://api.openweathermap.org/data/2.5/weather?q=${cityValue},${countryValue}&appid=${WEATHER_KEY}&units=metric`;
         const response = await fetch(API_URL);
         const data = await response.json();
 
