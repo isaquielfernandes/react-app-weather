@@ -1,12 +1,11 @@
 import React from 'react';
 
 const Weather = props => {
-    //console.log(props)
     return (
         <div>
             {
                 props.error &&
-                <div className="alert alert-danger">
+                <div className="m-2 alert alert-danger">
                     <p>{props.error}</p>
                 </div>
             }
@@ -18,7 +17,11 @@ const Weather = props => {
                     }
                     {
                         props.temperature &&
-                        <p><i className="fas fa-temperature-low"></i> Temperature: {props.temperature} ℃, {props.description}</p>
+                        <p><i className="fas fa-temperature-low"></i> Temperature: {props.temperature} ℃</p>
+                    }
+                    {
+                        props.weather &&
+                    <p>{props.weather.map((w) => { return <span>{ w.main } {w.description }, </span>})}</p>
                     }
                     {
                         props.humidity &&
