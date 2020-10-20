@@ -9,17 +9,6 @@ const ACTIONS = {
     ERROR: 'error'
 }
 
-const state = {
-    temperature: '',
-    weather: [],
-    description: '',
-    humidity: '',
-    wind_speed: 0,
-    city: '',
-    country: '',
-    error: null
-};
-
 function reducer(state, action) {
     switch(action.type){
         case ACTIONS.MAKE_REQUEST:
