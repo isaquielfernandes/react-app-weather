@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import './App.css';
-
+import { Container } from 'react-bootstrap'
 import NavBar from "./components/NavBar";
 import WeatherForm from './components/WeatherForm';
 import Weather from './components/Weather';
@@ -59,7 +59,7 @@ class  App extends Component {
     render() {
         return  <>
             <NavBar/>
-                <div className="container p-4">
+                <Container className="p-4">
                     <div className="row">
                         <div className="col-md-4">
                             <WeatherForm
@@ -68,7 +68,7 @@ class  App extends Component {
                             <Weather {...this.state} />
                         </div>
                     </div>
-                </div>
+                </Container>
         </>
     }
 }
