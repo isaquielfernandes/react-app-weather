@@ -6,14 +6,14 @@ const Weather = props => {
         <div>
             {
                 props.error &&
-                <div className="m-2 alert alert-danger">
+                <div className="my-2 alert alert-danger">
                     <p>{props.error}</p>
                 </div>
             }
             {props.temperature ?
-                <Card.Body className="mt-2 animated fadeInUp" >
+                <Card.Body className="card mt-2 animated fadeInUp" >
                     {
-                        props.city && props.country &&
+                        props.city &&
                         <p><i className="fas fa-location-arrow"></i> Location: {props.city}, {props.country}</p>
                     }
                     {
@@ -22,7 +22,7 @@ const Weather = props => {
                     }
                     {
                         props.weather &&
-                    <p>{props.weather.map((w) => { return <span>{ w.main } {w.description }, </span>})}</p>
+                        <p>{props.weather.map((w) => { return <span>{ w.main } {w.description }, </span>})}</p>
                     }
                     {
                         props.humidity &&
@@ -34,7 +34,7 @@ const Weather = props => {
                     }
                 </Card.Body>
                 :
-                <Card.Body className="mt-2 text-center">
+                <Card.Body className="card mt-2 text-center">
                     <i className="fas fa-smog fa-10x"></i>
                 </Card.Body>
             }
