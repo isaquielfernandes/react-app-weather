@@ -4,6 +4,7 @@ import { Container } from 'react-bootstrap'
 import NavBar from "./components/NavBar";
 import WeatherForm from './components/WeatherForm';
 import Weather from './components/Weather';
+import axios from "axios";
 import { WEATHER_KEY } from './app/Keys';
 
 //import getWeather  from "./service/useFetchWeather";
@@ -30,7 +31,7 @@ class  App extends Component {
             // metric parameter is for Celcius Unit
             //const API_URL_1 = `http://api.openweathermap.org/data/2.5/forecast/daily?q=London&cnt=7&appid=${WEATHER_KEY}&units=metric`;
             const API_URL = `https://api.openweathermap.org/data/2.5/weather?q=${cityValue}&cnt=5&appid=${WEATHER_KEY}&units=metric`;
-            const response = await fetch(API_URL);
+            const response = await axios.get(API_URL);
             const data = await response.json();
 
             /*const res = await fetch(API_URL_1);
