@@ -18,6 +18,47 @@ state = {
     country: '',
     error: null
 };
+const BASE_URL = ''
+
+function reducer(state, action) {
+    switch(action.type){
+        case ACTIONS.MAKE_REQUEST:
+            return { loading: true, jobs: [] }
+        case ACTIONS.GET_DATA:
+            return { ...state, loading: false, jobs: action.payload.jobs }
+        case ACTIONS.ERROR:
+            return { ...state, loading: false, error: action.payload.error, jobs: []}
+        default:
+            return state
+    }
+}
+
+const useFetchWeather = (params) => {
+
+    const [state, dispatch] = useReducer(reducer, { jobs: [], loading: true})
+
+    useEffect(() => {
+        const cancelToken = axios.CancelToken.source()
+        dispatch({type: ACTIONS.MAKE_REQUEST})
+        axios.get(BASE_URL, {
+            cancelToken: cancelToken.token,
+            params: {mardown: true, ...params}
+        }).then(res => {
+            dispatch({type: ACTIONS.GET_DATA, payload: {jobs: res.data}})
+        }).catch(e => {
+            if(axios.isCancel(e)) return
+            dispatch({type: ACTIONS.ERROR, payload: {error: e}})
+        })
+
+        return () => {
+            cancelToken.cancel()
+        }
+
+    }, [params])
+
+    return state
+}
+
 
 export default getWeather = async (e) => {
     e.preventDefault();
@@ -35,7 +76,6 @@ export default getWeather = async (e) => {
 
         /* res = await fetch(API_URL_1);
         const data1 = await res.json();*/
-        console.log(data)
 
         this.setState({
             temperature: data.main.temp,
@@ -54,3 +94,5 @@ export default getWeather = async (e) => {
     }
 
 }
+
+export default useFetchWeather
