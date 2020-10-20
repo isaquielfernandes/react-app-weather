@@ -1,4 +1,5 @@
 import React from 'react';
+import { Card } from 'react-bootstrap'
 
 const Weather = props => {
     return (
@@ -10,7 +11,7 @@ const Weather = props => {
                 </div>
             }
             {props.temperature ?
-                <div className="card card-body mt-2 animated fadeInUp" >
+                <Card.Body className="mt-2 animated fadeInUp" >
                     {
                         props.city && props.country &&
                         <p><i className="fas fa-location-arrow"></i> Location: {props.city}, {props.country}</p>
@@ -31,11 +32,11 @@ const Weather = props => {
                         props.wind_speed &&
                         <p><i className="fas fa-wind"></i> Wind Speed: {props.wind_speed}</p>
                     }
-                </div>
+                </Card.Body>
                 :
-                <div className="card card-body mt-2 text-center">
-                    <i className="fas fa-sun fa-10x"></i>
-                </div>
+                <Card.Body className="mt-2 text-center">
+                    <i className="fas fa-smog fa-10x"></i>
+                </Card.Body>
             }
         </div>
     );
