@@ -62,9 +62,7 @@ const useFetchWeather = (params) => {
 
 export default getWeather = async (e) => {
     e.preventDefault();
-    const {
-        city
-    } = e.target.elements;
+    const { city } = e.target.elements;
     const cityValue = city.value;
 
     if (cityValue) {
