@@ -14,5 +14,5 @@ const rootReducer = combineReducers({
   storage
 }, rootReducer)*/
 
-export const store = createStore(persistedReducer)
+export const store = createStore(rootReducer)
 //export const persisetdStore = persistStore(store)
