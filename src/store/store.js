@@ -2,7 +2,7 @@ import { createStore, combineReducers } from 'redux'
 import { persistStore, persistReducer } from 'redux-persist'
 import storage from 'redux-persist/lib/storage'
 
-import forecastReducer from './reducer/forecast.reducer'
+import forecastReducer from './reducers/forecast.reducer'
 
 
 const rootReducer = combineReducers({
