@@ -1,4 +1,4 @@
-export function getNextSevenDays(): string[] {
+export function getNextSevenDays() {
   const days = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
   const next7Days = [];
   for (let i = 0; i < 7; i++) {
