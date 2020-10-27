@@ -1,5 +1,5 @@
 import React from 'react'
-import { Card, Form, Button } from 'react-bootstrap'
+import { Card, Form, Button, Col } from 'react-bootstrap'
 
 const WeatherForm = (props) => (
 
