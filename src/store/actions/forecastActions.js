@@ -1,38 +1,35 @@
 import {
   fetchExtendedForecastData,
-  fetchWeatherData
-} from '../../service/useFetchWeather';
-import {
-  getNextSevenDays
-} from '../../utils/dateUtils';
+  fetchWeatherData,
+} from "../../service/useFetchWeather";
+import { getNextSevenDays } from "../../utils/dateUtils";
 
 export const fetchWeatherStart = () => ({
-  type: 'FETCH_WEATHER_START',
+  type: "FETCH_WEATHER_START",
 });
 
 export const fetchWeatherSuccess = (weather, forecast) => ({
-  type: 'FETCH_WEATHER_SUCCESS',
+  type: "FETCH_WEATHER_SUCCESS",
   payload: {
     weather,
-    forecast
+    forecast,
   },
 });
 
 export const fetchWeatherFail = (error) => ({
-  type: 'FETCH_WEATHER_ERROR',
+  type: "FETCH_WEATHER_ERROR",
   payload: error,
 });
 
 export const setIsLoading = (loading) => ({
-  type: 'SET_IS_LOADING',
+  type: "SET_IS_LOADING",
   payload: loading,
 });
 
 export const setIsInitialState = (state) => ({
-  type: 'SET_IS_INITIAL',
+  type: "SET_IS_INITIAL",
   payload: state,
 });
-
 
 export const fetchWeatherFromApi = (city) => {
   return (dispatch) => {
@@ -44,10 +41,7 @@ export const fetchWeatherFromApi = (city) => {
         return Promise.all([res[0].json(), res[1].json()]);
       })
       .then((res) => {
-        const {
-          forecast,
-          weather
-        } = transformWeatherData(res);
+        const { forecast, weather } = transformWeatherData(res);
         dispatch(fetchWeatherSuccess(weather, forecast));
         dispatch(setIsInitialState(false));
         dispatch(setIsLoading(false));
@@ -58,7 +52,6 @@ export const fetchWeatherFromApi = (city) => {
       });
   };
 };
-
 
 const transformWeatherData = (res) => {
   const weather = res[0];
@@ -92,6 +85,6 @@ const transformWeatherData = (res) => {
 
   return {
     weather,
-    forecasts
+    forecasts,
   };
 };
