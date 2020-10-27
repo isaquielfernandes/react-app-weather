@@ -1,7 +1,17 @@
-import React from 'react';
+import React from 'react'
+import { useDispatch, useSelector } from 'react-redux'
 import { Card } from 'react-bootstrap'
 
-const Weather = props => {
+import { store } from '../store/store'
+
+const Weather = (props) => {
+
+   const { weather, isError } = useSelector((store) => ({
+      weather: store.weather.weatherData,
+      isError: store.weather.isError
+    }));
+    const dispatch = useDispatch();
+
     return (
         <div>
             {
