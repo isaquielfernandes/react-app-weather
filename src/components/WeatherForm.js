@@ -5,9 +5,10 @@ const WeatherForm = (props) => (
 
     <Card.Body className="card">
         <Form onSubmit={props.getWeather}>
-            <div className="form-group">
-                <input type="text" name="city" placeholder="Your City Name" className="form-control" autoFocus/>
-            </div>
+            <Form.Group as={Col}>
+                <Form.Control type="text" name="city" type="text" placeholder="Your City Name" autoFocus/>
+            </Form.Group>
+ 
             <Button variant="info" type="submit" block>
                 Get Weather
             </Button>
