@@ -1,4 +1,5 @@
 import { fetchExtendedForecastData, fetchWeatherData } from '../../service/useFetchWeather';
+import { getNextSevenDays } from '../../utils/dateUtils';
 
 export const fetchWeatherStart = () => ({
   type: 'FETCH_WEATHER_START',
@@ -47,40 +48,37 @@ export const fetchWeatherFromApi = (city) => {
    };
 };
 
-/*
+
 const transformWeatherData = (res) => {
   const weather = res[0];
-  const forecast = [];
+  const forecasts = [];
 
   weather.weather = res[0].weather[0];
   weather.main = {
     ...weather.main,
-    temp: kelvinToCelcius(weather.main.temp),
-    feels_like: kelvinToCelcius(weather.main.feels_like),
-    temp_max: kelvinToCelcius(weather.main.temp_max),
-    temp_min: kelvinToCelcius(weather.main.temp_min),
+    temp: weather.main.temp,
+    feels_like: weather.main.feels_like,
+    temp_max: weather.main.temp_max,
+    temp_min: weather.main.temp_min,
   };
   weather.wind.speed = Math.round(weather.wind.speed * 3.6);
 
   const next7Days = getNextSevenDays();
 
-  res[1].list.forEach((i: any, index: number) => {
-    forecast.push({
+  res[1].list.forEach((forecast, index) => {
+    forecasts.push({
       day: next7Days[index],
       temp: {
-        temp_max: kelvinToCelcius(i.temp.max),
-        temp_min: kelvinToCelcius(i.temp.min),
+        temp_max: forecast.temp.max),
+        temp_min: forecast.temp.min),
       },
       weather: {
-        id: i.weather[0].id,
-        main: i.weather[0].main,
+        id: forecast.weather[0].id,
+        main: forecast.weather[0].main,
       },
     });
   });
 
-  return {
-    weather,
-    forecast,
-  };
+  return { weather, forecasts };
 };
-*/
+
