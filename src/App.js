@@ -6,8 +6,6 @@ import WeatherForm from './components/WeatherForm';
 import Weather from './components/Weather';
 import { WEATHER_KEY } from './app/Keys';
 
-//import getWeather  from "./service/useFetchWeather";
-
 class  App extends Component {
 
     state = {
