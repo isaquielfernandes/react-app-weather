@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+//import { useSelector, useDispatch} from 'react-redux'
 import "./App.css";
 import { Container } from "react-bootstrap";
 import NavBar from "./components/NavBar";
@@ -7,6 +8,7 @@ import Weather from "./components/Weather";
 import { WEATHER_KEY } from "./app/Keys";
 
 class App extends Component {
+
   state = {
     temperature: "",
     weather: [],
@@ -28,6 +30,8 @@ class App extends Component {
       const API_URL = `https://api.openweathermap.org/data/2.5/weather?q=${cityValue}&cnt=5&appid=${WEATHER_KEY}&units=metric`;
       const response = await fetch(API_URL);
       const data = await response.json();
+
+      console.log(data)
 
       this.setState({
         temperature: data.main.temp,
