@@ -1,5 +1,10 @@
-import { fetchExtendedForecastData, fetchWeatherData } from '../../service/useFetchWeather';
-import { getNextSevenDays } from '../../utils/dateUtils';
+import {
+  fetchExtendedForecastData,
+  fetchWeatherData
+} from '../../service/useFetchWeather';
+import {
+  getNextSevenDays
+} from '../../utils/dateUtils';
 
 export const fetchWeatherStart = () => ({
   type: 'FETCH_WEATHER_START',
@@ -7,7 +12,10 @@ export const fetchWeatherStart = () => ({
 
 export const fetchWeatherSuccess = (weather, forecast) => ({
   type: 'FETCH_WEATHER_SUCCESS',
-  payload: { weather, forecast },
+  payload: {
+    weather,
+    forecast
+  },
 });
 
 export const fetchWeatherFail = (error) => ({
@@ -36,7 +44,10 @@ export const fetchWeatherFromApi = (city) => {
         return Promise.all([res[0].json(), res[1].json()]);
       })
       .then((res) => {
-        const { forecast, weather } = transformWeatherData(res);
+        const {
+          forecast,
+          weather
+        } = transformWeatherData(res);
         dispatch(fetchWeatherSuccess(weather, forecast));
         dispatch(setIsInitialState(false));
         dispatch(setIsLoading(false));
@@ -45,7 +56,7 @@ export const fetchWeatherFromApi = (city) => {
         dispatch(fetchWeatherFail(err));
         dispatch(setIsLoading(false));
       });
-   };
+  };
 };
 
 
@@ -69,8 +80,8 @@ const transformWeatherData = (res) => {
     forecasts.push({
       day: next7Days[index],
       temp: {
-        temp_max: forecast.temp.max),
-        temp_min: forecast.temp.min),
+        temp_max: forecast.temp.max,
+        temp_min: forecast.temp.min,
       },
       weather: {
         id: forecast.weather[0].id,
@@ -79,6 +90,8 @@ const transformWeatherData = (res) => {
     });
   });
 
-  return { weather, forecasts };
+  return {
+    weather,
+    forecasts
+  };
 };
-
