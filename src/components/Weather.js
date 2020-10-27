@@ -21,10 +21,6 @@ const Weather = props => {
                         <p><i className="fas fa-temperature-low"></i> Temperature: {props.temperature} ℃</p>
                     }
                     {
-                        props.weather &&
-                        <p>{props.weather.map((w) => { return <span>{ w.main } {w.description }, </span>})}</p>
-                    }
-                    {
                         props.humidity &&
                         <p><i className="fas fa-water"></i> Humidity: {props.humidity}</p>
                     }
