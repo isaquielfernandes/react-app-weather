@@ -8,7 +8,7 @@ const WeatherForm = (props) => (
             <div className="form-group">
                 <input type="text" name="city" placeholder="Your City Name" className="form-control" autoFocus/>
             </div>
-            <Button variant="info" block>
+            <Button variant="info" type="submit" block>
                 Get Weather
             </Button>
         </Form>
