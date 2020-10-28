@@ -5,12 +5,15 @@ import { Container } from "react-bootstrap";
 import NavBar from "./components/NavBar";
 import WeatherForm from "./components/WeatherForm";
 import Weather from "./components/Weather";
+import ForecastContainer from './components/forecast/ForecastContainer'
 import { fetchWeatherData, fetchWeatherOneCallData } from './api/useFetchWeather';
+import { unixTimeToDate } from './utils/dateUtils'
 
 
 const App = () => {
 
   const [weather, setWeather] = useState({
+    dt: "",
     temp: "",
     feels_like: 0,
     temp_min: 0,
@@ -19,12 +22,15 @@ const App = () => {
     description: "",
     icon: "",
     humidity: "",
+    visibility: "",
     wind_speed: 0,
     city: "",
     country: "",
     error: null,
   });
-
+  const [forecast, setForecast] = useState({
+    daily: []
+  })
 
   const getWeather = async (e) => {
     e.preventDefault();
@@ -36,26 +42,29 @@ const App = () => {
       const response = await fetchWeatherData(cityValue);
       const data = await response.json();
 
-      console.log(data.coord.lat);
-
       const res = await fetchWeatherOneCallData(data.coord.lat, data.coord.lon);
       const result= await res.json();
-      console.log(result);
 
       setWeather({
-        temp: data.main.temp,
-        feels_like: data.main.feels_like,
+        dt: unixTimeToDate(result.current.dt),
+        temp: result.current.temp,
+        feels_like: result.current.feels_like,
         temp_min: data.main.temp_min,
         temp_max: data.main.temp_max,
         main: data.weather[0].main,
-        icon: "http://openweathermap.org/img/w/" + data.weather[0].icon + ".png",
-        description: data.weather[0].description,
-        humidity: data.main.humidity,
-        wind_speed: data.wind.speed,
+        icon: "http://openweathermap.org/img/w/" + result.current.weather[0].icon + ".png",
+        description: result.current.weather[0].description,
+        humidity: result.current.humidity,
+        visibility: result.current.visibility,
+        wind_speed: result.current.wind_speed,
         city: data.name,
         country: data.sys.country,
         error: null,
       });
+
+      setForecast({
+        daily: [...result.daily]
+      })
     } else {
       setWeather({
         error: "Please enter a City!",
@@ -70,6 +79,9 @@ const App = () => {
           <div className="col-md-4">
             <WeatherForm getWeather={getWeather} />
             <Weather weather={weather} />
+          </div>
+          <div className="col-md-8">
+            <ForecastContainer forecast={forecast}/>
           </div>
         </div>
       </Container>
