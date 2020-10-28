@@ -46,17 +46,17 @@ const Weather = ({weather}) => {
                     }
                     {
                         weather.wind_speed &&
-                        <p><i className="fas fa-wind"></i> Wind Speed: {weather.wind_speed}</p>
+                        <p><i className="fas fa-wind"></i> Wind Speed: {weather.wind_speed} metre/sec</p>
                     }
                     {
                         weather.feels_like &&
-                        <p> Feels Like: {weather.feels_like}℃</p>
+                        <p> Feels Like: {weather.feels_like} ℃</p>
                     }
                     {
                         weather.icon &&
                         <div>
                             <hr className="m-0"/>
-                            <img src={ weather.icon } alt="" width={64} height={64}/>
+                            <img src={ weather.icon } alt="" width={48} height={48}/>
                             <span>{weather.description}</span>
                         </div>
                     }
