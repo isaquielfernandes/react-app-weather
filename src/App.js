@@ -1,47 +1,54 @@
-import React, { Component } from "react";
+import React, { useState } from "react";
 //import { useSelector, useDispatch} from 'react-redux'
 import "./App.css";
 import { Container } from "react-bootstrap";
 import NavBar from "./components/NavBar";
 import WeatherForm from "./components/WeatherForm";
 import Weather from "./components/Weather";
-import { WEATHER_KEY } from "./app/Keys";
+import { fetchWeatherData, fetchWeatherOneCallData } from './api/useFetchWeather';
 
-class App extends Component {
 
-  state = {
+const App = () => {
+
+  const [weather, setWeather] = useState({
     temp: "",
     feels_like: 0,
     temp_min: 0,
     temp_max: 0,
-    weather: [],
+    main: "",
     description: "",
+    icon: "",
     humidity: "",
     wind_speed: 0,
     city: "",
     country: "",
     error: null,
-  };
+  });
 
-  getWeather = async (e) => {
+
+  const getWeather = async (e) => {
     e.preventDefault();
     const { city } = e.target.elements;
     const cityValue = city.value;
 
     if (cityValue) {
       // metric parameter is for Celcius Unit
-      const API_URL = `https://api.openweathermap.org/data/2.5/weather?q=${cityValue}&cnt=5&appid=${WEATHER_KEY}&units=metric`;
-      const response = await fetch(API_URL);
+      const response = await fetchWeatherData(cityValue);
       const data = await response.json();
 
-      console.log(data)
+      console.log(data.coord.lat);
 
-      this.setState({
+      const res = await fetchWeatherOneCallData(data.coord.lat, data.coord.lon);
+      const result= await res.json();
+      console.log(result);
+
+      setWeather({
         temp: data.main.temp,
         feels_like: data.main.feels_like,
         temp_min: data.main.temp_min,
         temp_max: data.main.temp_max,
-        weather: [...data.weather],
+        main: data.weather[0].main,
+        icon: "http://openweathermap.org/img/w/" + data.weather[0].icon + ".png",
         description: data.weather[0].description,
         humidity: data.main.humidity,
         wind_speed: data.wind.speed,
@@ -50,27 +57,24 @@ class App extends Component {
         error: null,
       });
     } else {
-      this.setState({
+      setWeather({
         error: "Please enter a City!",
       });
     }
   };
-
-  render() {
-    return (
-      <>
-        <NavBar />
-        <Container className="p-4">
-          <div className="row">
-            <div className="col-md-4">
-              <WeatherForm getWeather={this.getWeather} />
-              <Weather {...this.state} />
-            </div>
+  return (
+    <>
+      <NavBar />
+      <Container className="p-4">
+        <div className="row">
+          <div className="col-md-4">
+            <WeatherForm getWeather={getWeather} />
+            <Weather weather={weather} />
           </div>
-        </Container>
-      </>
-    );
-  }
-}
+        </div>
+      </Container>
+    </>
+  );
+};
 
 export default App;

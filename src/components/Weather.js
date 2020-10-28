@@ -4,7 +4,7 @@ import { Card } from 'react-bootstrap'
 
 //import { store } from '../store/store'
 
-const Weather = (props) => {
+const Weather = ({weather}) => {
 
    /*const { weather, isError } = useSelector((store) => ({
       weather: store.weather.weatherData,
@@ -15,28 +15,35 @@ const Weather = (props) => {
     return (
         <div>
             {
-                props.error &&
+                weather.error &&
                 <div className="my-2 py-2 alert alert-danger">
-                    <p>{props.error}</p>
+                    <p>{weather.error}</p>
                 </div>
             }
-            {props.temp ?
+            {weather.temp ?
                 <Card.Body className="card mt-2 animated fadeInUp" >
                     {
-                        props.city &&
-                        <p><i className="fas fa-location-arrow"></i> Location: {props.city}, {props.country}</p>
+                        weather.city &&
+                        <p><i className="fas fa-map-marked-alt"></i> Location: {weather.city}, {weather.country}</p>
                     }
                     {
-                        props.temp &&
-                        <p><i className="fas fa-temperature-low"></i> Temperature: {props.temp_min} / {props.temp_max} ℃</p>
+                        weather.temp &&
+                        <p><i className="fas fa-temperature-low"></i> Temperature: {weather.temp_min} / {weather.temp_max} ℃</p>
                     }
                     {
-                        props.humidity &&
-                        <p><i className="fas fa-water"></i> Humidity: {props.humidity} %</p>
+                        weather.temp &&
+                        <div>
+                            <img src={ weather.icon } alt="" width={64} height={64}/>
+                            <span>{weather.description}</span>
+                        </div>
                     }
                     {
-                        props.wind_speed &&
-                        <p><i className="fas fa-wind"></i> Wind Speed: {props.wind_speed} meter/sec</p>
+                        weather.humidity &&
+                        <p><i className="fas fa-water"></i> Humidity: {weather.humidity} %</p>
+                    }
+                    {
+                        weather.wind_speed &&
+                        <p><i className="fas fa-wind"></i> Wind Speed: {weather.wind_speed}</p>
                     }
                 </Card.Body>
                 :
