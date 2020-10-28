@@ -10,12 +10,10 @@ import { WEATHER_KEY } from "./app/Keys";
 class App extends Component {
 
   state = {
-    main: {
-      temp: "",
-      feels_like: 0,
-      temp_min: 0,
-      temp_max: 0
-    },
+    temp: "",
+    feels_like: 0,
+    temp_min: 0,
+    temp_max: 0,
     weather: [],
     description: "",
     humidity: "",
@@ -39,12 +37,10 @@ class App extends Component {
       console.log(data)
 
       this.setState({
-        main: {
-          temp: data.main.temp,
-          feels_like: data.main.feels_like,
-          temp_min: data.main.temp_min,
-          temp_max: data.main.temp_max
-        },
+        temp: data.main.temp,
+        feels_like: data.main.feels_like,
+        temp_min: data.main.temp_min,
+        temp_max: data.main.temp_max,
         weather: [...data.weather],
         description: data.weather[0].description,
         humidity: data.main.humidity,
