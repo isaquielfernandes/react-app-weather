@@ -9,7 +9,7 @@ const ForecastContainer = ({forecast}) => {
                 <h3 data-v-3724b8e4="" className="text-center py-2">8-Day Forecast</h3>
                 <hr/>
             </Card.Title>
-            <Card.Body className="mt-2 animated fadeInUp day-list">
+            <Card.Body className="animated fadeInUp day-list">
                 {
                     forecast.daily.map(daily => <ForecastItem key={daily.dt} daily={daily}/>)
                 }
