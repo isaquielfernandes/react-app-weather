@@ -1,7 +1,7 @@
 import {
   fetchExtendedForecastData,
   fetchWeatherData,
-} from "../../service/useFetchWeather";
+} from "../../api/useFetchWeather";
 import { getNextSevenDays } from "../../utils/dateUtils";
 
 export const fetchWeatherStart = () => ({
