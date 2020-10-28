@@ -16,19 +16,19 @@ const Weather = (props) => {
         <div>
             {
                 props.error &&
-                <div className="my-2 alert alert-danger">
+                <div className="my-2 py-2 alert alert-danger">
                     <p>{props.error}</p>
                 </div>
             }
-            {props.main.temp ?
+            {props.temp ?
                 <Card.Body className="card mt-2 animated fadeInUp" >
                     {
                         props.city &&
                         <p><i className="fas fa-location-arrow"></i> Location: {props.city}, {props.country}</p>
                     }
                     {
-                        props.main.temp &&
-                        <p><i className="fas fa-temperature-low"></i> Temperature: {props.main.temp_min} / {props.mais.temp.max} ℃</p>
+                        props.temp &&
+                        <p><i className="fas fa-temperature-low"></i> Temperature: {props.temp_min} / {props.temp.max} ℃</p>
                     }
                     {
                         props.humidity &&
