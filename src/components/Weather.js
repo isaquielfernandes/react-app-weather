@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 //import { useDispatch, useSelector } from 'react-redux'
-import { Card, Alert } from 'react-bootstrap'
+import { Card, Alert, Badge } from 'react-bootstrap'
 
 //import { store } from '../store/store'
 
@@ -50,7 +50,7 @@ const Weather = ({weather}) => {
                     }
                     {
                         weather.feels_like &&
-                        <p> Feels Like: {weather.feels_like} ℃</p>
+                        <Badge variant="warning"> Feels Like: {weather.feels_like} ℃</Badge>
                     }
                     {
                         weather.icon &&
