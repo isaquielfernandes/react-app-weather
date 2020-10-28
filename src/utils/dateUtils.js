@@ -18,3 +18,15 @@ export const unixTimeToDate = (unixTimestamp) => {
 
   return humanDateFormat;
 }
+
+export const unixTimeToWeekDay = (unixTimestamp) => {
+  const milliseconds = unixTimestamp * 1000;
+
+  const dateObject = new Date(milliseconds);
+
+  const humanDateFormat = dateObject.toLocaleString("en-US", {weekday: "long"});
+
+  return humanDateFormat;
+}
+
+
