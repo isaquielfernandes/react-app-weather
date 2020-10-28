@@ -11,7 +11,7 @@ class App extends Component {
 
   state = {
     main: {
-      temp: 0,
+      temp: "",
       feels_like: 0,
       temp_min: 0,
       temp_max: 0
