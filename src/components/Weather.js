@@ -1,6 +1,6 @@
 import React from 'react'
 //import { useDispatch, useSelector } from 'react-redux'
-import { Card } from 'react-bootstrap'
+import { Card, Alert } from 'react-bootstrap'
 
 //import { store } from '../store/store'
 
@@ -11,14 +11,16 @@ const Weather = ({weather}) => {
       isError: store.weather.isError
     }));
     const dispatch = useDispatch();*/
-
+    const [show, setShow] = useState(true);
+  
     return (
-        <div>
+        <>
             {
                 weather.error &&
-                <div className="my-2 py-2 alert alert-danger">
+                <Alert variant="danger" onClose={() => setShow(false)} dismissible className="my-2 py-2">
+                    <Alert.Heading>Oh snap! You got an error!</Alert.Heading>
                     <p>{weather.error}</p>
-                </div>
+                </Alert>
             }
             {weather.temp ?
                 <Card.Body className="card mt-2 animated fadeInUp" >
@@ -60,7 +62,7 @@ const Weather = ({weather}) => {
                     <i className="fas fa-smog fa-5x"></i>
                 </Card.Body>
             }
-        </div>
+        </>
     );
 };
 
