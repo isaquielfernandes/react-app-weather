@@ -24,7 +24,7 @@ export const unixTimeToWeekDay = (unixTimestamp) => {
 
   const dateObject = new Date(milliseconds);
 
-  const humanDateFormat = dateObject.toLocaleString("en-US", {weekday: "long"});
+  const humanDateFormat = dateObject.toLocaleString("en-US", {weekday: "long", day: 'numeric'});
 
   return humanDateFormat;
 }
