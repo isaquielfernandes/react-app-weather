@@ -36,7 +36,7 @@ const Weather = (props) => {
                     }
                     {
                         props.wind_speed &&
-                        <p><i className="fas fa-wind"></i> Wind Speed: {props.wind_speed}</p>
+                        <p><i className="fas fa-wind"></i> Wind Speed: {props.wind_speed} meter/sec</p>
                     }
                 </Card.Body>
                 :
