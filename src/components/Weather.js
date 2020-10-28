@@ -2,7 +2,7 @@ import React from 'react'
 //import { useDispatch, useSelector } from 'react-redux'
 import { Card } from 'react-bootstrap'
 
-import { store } from '../store/store'
+//import { store } from '../store/store'
 
 const Weather = (props) => {
 
@@ -20,7 +20,7 @@ const Weather = (props) => {
                     <p>{props.error}</p>
                 </div>
             }
-            {props.temperature ?
+            {props.main.temp ?
                 <Card.Body className="card mt-2 animated fadeInUp" >
                     {
                         props.city &&
