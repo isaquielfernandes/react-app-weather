@@ -28,7 +28,7 @@ const Weather = (props) => {
                     }
                     {
                         props.temp &&
-                        <p><i className="fas fa-temperature-low"></i> Temperature: {props.temp_min} / {props.temp.max} ℃</p>
+                        <p><i className="fas fa-temperature-low"></i> Temperature: {props.temp_min} / {props.temp_max} ℃</p>
                     }
                     {
                         props.humidity &&
