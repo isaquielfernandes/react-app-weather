@@ -27,12 +27,12 @@ const Weather = (props) => {
                         <p><i className="fas fa-location-arrow"></i> Location: {props.city}, {props.country}</p>
                     }
                     {
-                        props.temperature &&
-                        <p><i className="fas fa-temperature-low"></i> Temperature: {props.temperature} ℃</p>
+                        props.main.temp &&
+                        <p><i className="fas fa-temperature-low"></i> Temperature: {props.main.temp_min} {'/'} {props.mais.temp.max} ℃</p>
                     }
                     {
                         props.humidity &&
-                        <p><i className="fas fa-water"></i> Humidity: {props.humidity}</p>
+                        <p><i className="fas fa-water"></i> Humidity: {props.humidity} %</p>
                     }
                     {
                         props.wind_speed &&
