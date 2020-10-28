@@ -16,6 +16,8 @@ const App = () => {
     dt: "",
     temp: "",
     feels_like: 0,
+    sunrise: 0,
+    sunset: 0,
     temp_min: 0,
     temp_max: 0,
     main: "",
@@ -28,6 +30,7 @@ const App = () => {
     country: "",
     error: null,
   });
+
   const [forecast, setForecast] = useState({
     daily: []
   })
@@ -49,6 +52,8 @@ const App = () => {
         dt: unixTimeToDate(result.current.dt),
         temp: result.current.temp,
         feels_like: result.current.feels_like,
+        sunrise: result.current.sunrise,
+        sunset: result.current.sunset,
         temp_min: data.main.temp_min,
         temp_max: data.main.temp_max,
         main: data.weather[0].main,
