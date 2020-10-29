@@ -1,31 +1,10 @@
 const initialState = {
-  weatherData: {
-    main: {
-      feels_like: 0,
-      humidity: 0,
-      pressure: 0,
-      temp: 0,
-      temp_max: 0,
-      temp_min: 0,
-    },
-    name: "",
-    sys: {
-      country: "",
-      sunrise: 0,
-      sunset: 0,
-    },
-    weather: {
-      id: 200,
-      main: "",
-      description: "",
-      icon: "",
-    },
-    wind: {
-      deg: 0,
-      speed: 0,
-    },
+  weather: {},
+  forecast: {
+    current: {},
+    daily: [],
+    hourly: []
   },
-  extendedWeatherData: [],
   isError: false,
 };
 
@@ -36,8 +15,8 @@ export default function (state = initialState, action) {
     case "FETCH_WEATHER_SUCCESS":
       return {
         ...state,
-        weatherData: action.payload.weather,
-        extendedWeatherData: action.payload.forecast,
+        weather: action.payload.weather,
+        forecast: action.payload.forecast,
       };
     case "FETCH_WEATHER_ERROR":
       return {

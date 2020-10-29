@@ -7,7 +7,7 @@ const NavBar = () => (
             <Navbar.Toggle aria-controls="responsive-navbar-nav" />
             <Navbar.Collapse id="responsive-navbar-nav">
                 <Nav className="mr-auto">
-                    <Nav.Link href="#features">Custon api</Nav.Link>
+                    <Nav.Link href="#"></Nav.Link>
                 </Nav>
             </Navbar.Collapse>
         </Navbar>

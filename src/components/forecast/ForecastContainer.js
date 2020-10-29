@@ -1,8 +1,12 @@
 import React from 'react';
 import { Card } from 'react-bootstrap';
+import { useSelector } from 'react-redux';
 import ForecastItem from './ForecastItem'
 
-const ForecastContainer = ({forecast}) => {
+const ForecastContainer = () => {
+
+    const  { forecast } = useSelector(state => state.forecast)
+    
     return (
         <Card className="daily-container">
             <Card.Title>

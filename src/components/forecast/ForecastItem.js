@@ -2,6 +2,7 @@ import React from "react";
 import { unixTimeToWeekDay } from '../../utils/dateUtils'
 
 const ForecastItem = ({ daily }) => {
+  
   return (
     <li data-v-3724b8e4 className="mb-2">
       <span data-v-3724b8e4>{unixTimeToWeekDay(daily.dt)}</span>
