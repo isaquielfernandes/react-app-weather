@@ -1,10 +1,16 @@
 import React from "react";
 import { useDispatch } from "react-redux";
-import { Card, Form } from "react-bootstrap";
+import {
+  Card,
+  Form,
+  InputGroup,
+  Button,
+  Row,
+  Col
+} from "react-bootstrap";
 import { fetchWeatherFromApi } from "../store/actions/forecastActions";
 
 const Search = () => {
-  
   const dispatch = useDispatch();
 
   const getWeatherByCityName = (e) => {
@@ -16,18 +22,29 @@ const Search = () => {
   };
 
   return (
-    <Card.Body className="card">
-      <Form onSubmit={getWeatherByCityName}>
-        <Form.Group>
-          <Form.Control
-            type="text"
-            name="city"
-            placeholder="Search for the City Name"
-            autoFocus
-          />
-        </Form.Group>
-      </Form>
-    </Card.Body>
+    <Row className="py-5 mt-3">
+      <Col md={{ span: 6, offset: 3 }}>
+        <Card.Body className="">
+          <Form onSubmit={getWeatherByCityName}>
+            <Form.Group>
+              <InputGroup className="mb-3">
+                <Form.Control
+                  type="text"
+                  name="city"
+                  placeholder="Search for the City Name"
+                  autoFocus
+                />
+                <InputGroup.Append>
+                  <Button variant="outline-secondary" type="submit">
+                    Search
+                  </Button>
+                </InputGroup.Append>
+              </InputGroup>
+            </Form.Group>
+          </Form>
+        </Card.Body>
+      </Col>
+    </Row>
   );
 };
 
