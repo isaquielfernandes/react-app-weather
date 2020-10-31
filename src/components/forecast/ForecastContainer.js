@@ -28,7 +28,7 @@ const ForecastContainer = () => {
           </Card.Title>*/}
           <Accordion className="animated fadeInUp day-list">
             {forecast.daily.map((daily, idx) => (
-              <ForecastItem key={idx} daily={daily} variante={variant[idx]} />
+              <ForecastItem key={idx} daily={daily} variant={variant[idx]} />
             ))}
           </Accordion>
         </div>
