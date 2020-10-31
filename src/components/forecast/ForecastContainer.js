@@ -12,12 +12,12 @@ const ForecastContainer = () => {
     <Row className="mt-3">
       <Col>
         <div className="daily-container">
-          <Card.Title className="card">
+          {/*<Card.Title className="card">
             <h3 data-v-3724b8e4="" className="text-center pt-2">
               Forecast
             </h3>
             <hr />
-          </Card.Title>
+          </Card.Title>*/}
           <Card.Body className="animated fadeInUp p-0 day-list">
             <Accordion >
             {forecast.daily.map((daily) => (
