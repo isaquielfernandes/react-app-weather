@@ -19,7 +19,7 @@ const ForecastDetails = ({ daily }) => {
             className="weather-icon"
           />
           <div data-v-1ab7fc2c>
-            <p data-v-1ab7fc2c>Overcast clouds. Moderate breeze.</p>
+            <p data-v-1ab7fc2c>{daily.weather[0].main}. Moderate breeze.</p>
             <p data-v-1ab7fc2c>The high will be {daily.temp.max}°C, the low will be {daily.temp.min}°C.</p>
           </div>
         </div>
@@ -122,23 +122,22 @@ const ForecastDetails = ({ daily }) => {
           </li>
           <li data-v-1b8538d2>
             <span data-v-1b8538d2 className="symbol">
-              Humidity:
+              Humidity: {" "}
             </span>
              {daily.humidity}%
           </li>
           <li data-v-1b8538d2>
             <span data-v-1b8538d2 className="symbol">
-              UV:
+              UV: {" "}
             </span>
              {daily.uvi}
           </li>
           <li data-v-1b8538d2>
             <span data-v-1b8538d2 className="symbol">
-              Dew point: 
+              Dew point: {" "}
             </span>
              {daily.dew_point}°C
           </li>
-          {/**/}
         </ul>
         <table data-v-1ab7fc2c>
           <tbody>
