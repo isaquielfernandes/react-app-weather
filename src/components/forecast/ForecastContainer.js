@@ -17,7 +17,7 @@ const ForecastContainer = () => {
             <hr />
           </Card.Title>
           <Card.Body className="animated fadeInUp day-list">
-            <Accordion defaultActiveKey={forecast.daily[0].dt}>
+            <Accordion >
             {forecast.daily.map((daily) => (
               <ForecastItem key={daily.dt} daily={daily} />
             ))}
