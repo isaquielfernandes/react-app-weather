@@ -5,14 +5,14 @@ import ForecastItem from "./ForecastItem";
 
 const ForecastContainer = () => {
   const { forecast } = useSelector((state) => state.forecast);
-  console.log(forecast.daily);
+  
   return (
     <>
     {forecast.daily[0].dt && (
     <Row className="mt-3">
       <Col>
         <div className="daily-container">
-          <Card.Title>
+          <Card.Title className="card">
             <h3 data-v-3724b8e4="" className="text-center pt-2">
               Forecast
             </h3>
