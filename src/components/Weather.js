@@ -62,9 +62,9 @@ const Weather = () => {
           )}
         </Card.Body>
       ) : (
-        {/*<Card.Body className="card mt-2 text-center">
+        <Card.Body className="card mt-2 text-center">
           <i className="fas fa-smog fa-5x"></i>
-        </Card.Body>*/}
+        </Card.Body>
       )}
     </>
   );
