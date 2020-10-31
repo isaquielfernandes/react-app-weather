@@ -1,5 +1,5 @@
 import React from "react";
-import { Card, Row, Col } from "react-bootstrap";
+import { Card, Row, Col, Accordion } from "react-bootstrap";
 import { useSelector } from "react-redux";
 import ForecastItem from "./ForecastItem";
 
@@ -17,9 +17,11 @@ const ForecastContainer = () => {
             <hr />
           </Card.Title>
           <Card.Body className="animated fadeInUp day-list">
+            <Accordion defaultActiveKey={forecast.daily[0].dt}>
             {forecast.daily.map((daily) => (
               <ForecastItem key={daily.dt} daily={daily} />
             ))}
+            </Accordion>
           </Card.Body>
         </Card>
       </Col>
