@@ -5,7 +5,17 @@ import ForecastItem from "./ForecastItem";
 
 const ForecastContainer = () => {
   const { forecast } = useSelector((state) => state.forecast);
-  
+  const variant = [
+     'Primary',
+     'Secondary',
+     'Success',
+     'Danger',
+     'Warning',
+     'Info',
+     'Light',
+     'Dark',
+  ]
+   
   return (
     <Row className="mt-3">
       <Col>
@@ -17,8 +27,8 @@ const ForecastContainer = () => {
             <hr />
           </Card.Title>*/}
           <Accordion className="animated fadeInUp day-list">
-            {forecast.daily.map((daily) => (
-              <ForecastItem key={daily.dt} daily={daily} />
+            {forecast.daily.map((daily, idx) => (
+              <ForecastItem key={idx} daily={daily} variante={variant[idx]/>
             ))}
           </Accordion>
         </div>
