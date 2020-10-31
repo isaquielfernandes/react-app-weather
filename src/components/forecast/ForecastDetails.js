@@ -55,21 +55,7 @@ const ForecastDetails = ({ daily }) => {
                   />
                 </g>
               </g>
-              <g data-v-025fe884 />
-              <g data-v-025fe884 />
-              <g data-v-025fe884 />
-              <g data-v-025fe884 />
-              <g data-v-025fe884 />
-              <g data-v-025fe884 />
-              <g data-v-025fe884 />
-              <g data-v-025fe884 />
-              <g data-v-025fe884 />
-              <g data-v-025fe884 />
-              <g data-v-025fe884 />
-              <g data-v-025fe884 />
-              <g data-v-025fe884 />
-              <g data-v-025fe884 />
-              <g data-v-025fe884 />
+              
             </svg>
             <span data-v-1b8538d2>{daily.clouds}</span>
           </li>
@@ -132,25 +118,25 @@ const ForecastDetails = ({ daily }) => {
                 />
               </g>
             </svg>
-            {daily.pressure}hPa
+             {daily.pressure}hPa
           </li>
           <li data-v-1b8538d2>
             <span data-v-1b8538d2 className="symbol">
               Humidity:
             </span>
-            {daily.humidity}%
+             {daily.humidity}%
           </li>
           <li data-v-1b8538d2>
             <span data-v-1b8538d2 className="symbol">
               UV:
             </span>
-            {daily.uvi}
+             {daily.uvi}
           </li>
           <li data-v-1b8538d2>
             <span data-v-1b8538d2 className="symbol">
-              Dew point:
+              Dew point: 
             </span>
-            {daily.dew_point}°C
+             {daily.dew_point}°C
           </li>
           {/**/}
         </ul>
