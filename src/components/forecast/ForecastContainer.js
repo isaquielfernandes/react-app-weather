@@ -7,8 +7,6 @@ const ForecastContainer = () => {
   const { forecast } = useSelector((state) => state.forecast);
   
   return (
-    <>
-    {forecast.daily[0].dt && (
     <Row className="mt-3">
       <Col>
         <div className="daily-container">
@@ -28,8 +26,6 @@ const ForecastContainer = () => {
         </div>
       </Col>
     </Row>
-   )}
-   </>
   );
 };
 
