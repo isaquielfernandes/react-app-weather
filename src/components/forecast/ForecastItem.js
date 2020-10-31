@@ -38,7 +38,7 @@ const ForecastItem = ({ daily }) => {
               as={Button}
               variant="link"
               className="chevron-container"
-              eventKey={daily.dt}
+              eventKey="0"
             >
               <span data-v-3724b8e4 className="chevron-container">
                 <svg
@@ -58,7 +58,7 @@ const ForecastItem = ({ daily }) => {
           </div>
         </li>
       </Card.Header>
-      <Accordion.Collapse eventKey={daily.dt}>
+      <Accordion.Collapse eventKey="0">
         <Card.Body>
           <ForecastDetails daily={daily}/>
         </Card.Body>
