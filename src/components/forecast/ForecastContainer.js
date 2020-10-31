@@ -16,13 +16,13 @@ const ForecastContainer = () => {
             </h3>
             <hr />
           </Card.Title>*/}
-          <Card.Body className="animated fadeInUp p-0 day-list">
+          <div className="animated fadeInUp p-0 day-list">
             <Accordion >
             {forecast.daily.map((daily) => (
               <ForecastItem key={daily.dt} daily={daily} />
             ))}
             </Accordion>
-          </Card.Body>
+          </div>
         </div>
       </Col>
     </Row>
