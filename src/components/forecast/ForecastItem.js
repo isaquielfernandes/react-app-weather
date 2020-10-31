@@ -5,7 +5,7 @@ import ForecastDetails from "./ForecastDetails";
 
 const ForecastItem = ({ daily }) => {
   return (
-    <Card className="p-1">
+    <Card className="">
       <Accordion.Toggle
         as={Card.Header}
         variant="link"
