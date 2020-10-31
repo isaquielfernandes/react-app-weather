@@ -3,9 +3,12 @@ import { Card, Accordion, Button } from "react-bootstrap";
 import { unixTimeToWeekDay } from "../../utils/dateUtils";
 import ForecastDetails from "./ForecastDetails";
 
-const ForecastItem = ({ daily }) => {
+const ForecastItem = ({ daily, variant }) => {
   return (
-    <Card className="mb-2">
+    <Card 
+       bg={variant.toLowerCase()}
+       text={variant.toLowerCase() === 'light' ? 'dark' : 'white'}
+       className="mb-2">
       <Accordion.Toggle
         as={Card.Header}
         variant="link"
