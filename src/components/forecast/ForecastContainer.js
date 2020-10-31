@@ -8,7 +8,7 @@ const ForecastContainer = () => {
   console.log(forecast.daily);
   return (
     <>
-    {forecast.daily ? (
+    {forecast.daily && (
     <Row className="mt-3">
       <Col>
         <div className="daily-container">
@@ -28,8 +28,6 @@ const ForecastContainer = () => {
         </div>
       </Col>
     </Row>
-   ) : (
-  
    )}
    </>
   );
