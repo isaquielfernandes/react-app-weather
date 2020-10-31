@@ -22,7 +22,7 @@ const Search = () => {
   };
 
   return (
-    <Row className="py-5 mt-3">
+    <Row className="pt-5 mt-3">
       <Col md={{ span: 6, offset: 3 }}>
         <Card.Body className="">
           <Form onSubmit={getWeatherByCityName}>
