@@ -29,4 +29,12 @@ export const unixTimeToWeekDay = (unixTimestamp) => {
   return humanDateFormat;
 }
 
+export const unixTimeToHours = (unixTimestamp) => {
+  const milliseconds = unixTimestamp * 1000;
 
+  const dateObject = new Date(milliseconds);
+
+  const humanDateFormat = dateObject.toLocaleString("en-US", {hour: 'numeric', minute: 'numeric'});
+
+  return humanDateFormat;
+}
