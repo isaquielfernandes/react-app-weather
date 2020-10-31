@@ -7,7 +7,7 @@ const ForecastContainer = () => {
   const { forecast } = useSelector((state) => state.forecast);
   console.log(forecast.daily);
   return (
-    {forecast.daily.temp ? (
+    {forecast.daily ? (
     <Row className="mt-3">
       <Col>
         <div className="daily-container">
