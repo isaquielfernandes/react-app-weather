@@ -5,8 +5,12 @@ import ForecastDetails from "./ForecastDetails";
 
 const ForecastItem = ({ daily }) => {
   return (
-    <Accordion defaultActiveKey="0">
-      <Card.Header>
+    <Card>
+      <Accordion.Toggle
+        as={Card.Header}
+        variant="link"
+        eventKey={daily.dt}
+       >
         <li data-v-3724b8e4 className="my-1 py-1">
           <span data-v-3724b8e4>{unixTimeToWeekDay(daily.dt)}</span>
           <div data-v-3724b8e4 className="day-list-values">
@@ -34,12 +38,6 @@ const ForecastItem = ({ daily }) => {
             >
               {daily.weather[0].description}
             </span>
-            <Accordion.Toggle
-              as={Button}
-              variant="link"
-              className="chevron-container"
-              eventKey="0"
-            >
               <span data-v-3724b8e4 className="chevron-container">
                 <svg
                   data-v-3724b8e4
@@ -54,16 +52,15 @@ const ForecastItem = ({ daily }) => {
                   ></path>
                 </svg>
               </span>
-            </Accordion.Toggle>
           </div>
         </li>
-      </Card.Header>
-      <Accordion.Collapse eventKey="0">
+      </Accordion.Toggle>
+      <Accordion.Collapse eventKey={daily.dt}>
         <Card.Body>
           <ForecastDetails daily={daily}/>
         </Card.Body>
       </Accordion.Collapse>
-    </Accordion>
+    </Card>
   );
 };
 
