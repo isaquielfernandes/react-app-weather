@@ -56,14 +56,14 @@ const Weather = () => {
           {weather.icon && (
             <div>
               <hr className="m-0" />
-              <img src={weather.icon} alt="" width={48} height={48} />
+              <img src={weather.icon} alt="" width={56} height={56} />
               <span>{weather.description}</span>
             </div>
           )}
         </Card.Body>
       ) : (
         <Card.Body className="card mt-2 text-center">
-          <i className="fas fa-smog fa-5x"></i>
+          {/*<i className="fas fa-smog fa-5x"></i>*/}
         </Card.Body>
       )}
     </>
