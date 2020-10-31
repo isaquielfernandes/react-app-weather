@@ -22,30 +22,30 @@ const Weather = () => {
             </p>
           )}
           {weather.city && (
-            <p>
+            <p className="m-1">
               <i className="fas fa-map-marked-alt"></i> Location: {weather.city}
               , {weather.country}
             </p>
           )}
           {weather.temp && (
-            <p>
+            <p className="m-1">
               <i className="fas fa-temperature-low"></i> Temperature:{" "}
               {weather.temp} ℃
             </p>
           )}
           {weather.humidity && (
-            <p>
+            <p className="m-1">
               <i className="fas fa-water"></i> Humidity: {weather.humidity} %
             </p>
           )}
           {weather.visibility && (
-            <p>
+            <p className="m-1">
               <i className="fas fa-eye-slash"></i> Visibility:{" "}
               {weather.visibility}
             </p>
           )}
           {weather.wind_speed && (
-            <p>
+            <p className="m-1">
               <i className="fas fa-wind"></i> Wind Speed: {weather.wind_speed}{" "}
               metre/sec
             </p>
