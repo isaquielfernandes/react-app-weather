@@ -16,7 +16,7 @@ const Weather = () => {
       {weather.temp ? (
         <Card.Body className="card mt-2 animated fadeInUp">
           {weather.dt && (
-            <p>
+            <p className="m-1">
               <i className="far fa-calendar-alt"></i> Day:{" "}
               <strong>{weather.dt}</strong>{" "}
             </p>
