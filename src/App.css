@@ -49,16 +49,6 @@ li {
   padding: 8pt;
 }
 
-.daily-container .day-list li[data-v-3724b8e4] {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  cursor: pointer;
-  padding: 2pt 4pt;
-  height: 40px;
-  border-radius: 4pt;
-}
-
 .standard-padding[data-v-1ab7fc2c] {
   padding-left: 16pt;
   padding-right: 16pt;
