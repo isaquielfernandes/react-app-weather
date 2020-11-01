@@ -1,12 +1,13 @@
 import React from 'react';
 import { Navbar, Nav } from "react-bootstrap";
+import logo from "../logo.svg";
 
 const NavBar = () => (
         <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
             <Navbar.Brand href="#home">
               <img
                 alt="logo"
-                src="../logo.svg"
+                src={logo}
                 width="30"
                 height="30"
                 className="d-inline-block align-top"
