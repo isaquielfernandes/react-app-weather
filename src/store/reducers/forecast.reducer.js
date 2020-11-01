@@ -21,7 +21,7 @@ export default function (state = initialState, action) {
     case "FETCH_WEATHER_ERROR":
       return {
         ...state,
-        isError: action.payload.error.message,
+        isError: action.payload.error,
       };
     default:
       return state;
