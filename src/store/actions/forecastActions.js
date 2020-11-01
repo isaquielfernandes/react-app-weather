@@ -66,14 +66,14 @@ export const fetchWeatherFromApi = (city) => {
 const transformWeatherData = (res) => {
   const weather = {
     dt: unixTimeToDate(res[0].dt),
-    temp: res[0].main.temp,
-    feels_like: res[0].main.feels_like,
+    temp: Math.round(res[0].main.temp),
+    feels_like: Math.round(res[0].main.feels_like),
     humidity: res[0].main.humidity,
     sunrise: res[0].sys.sunrise,
     sunset: res[0].sys.sunset,
     country: res[0].sys.country,
-    temp_min: res[0].main.temp_min,
-    temp_max: res[0].main.temp_max,
+    temp_min: Math.round(res[0].main.temp_min),
+    temp_max: Math.round(res[0].main.temp_max),
     main: res[0].weather[0].main,
     icon: "http://openweathermap.org/img/w/" + res[0].weather[0].icon + ".png",
     description: res[0].weather[0].description,
