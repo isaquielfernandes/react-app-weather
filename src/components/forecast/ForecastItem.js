@@ -31,7 +31,7 @@ const ForecastItem = ({ daily, variant }) => {
                 className="weather-icon"
               />
               <span data-v-3724b8e4>
-                {daily.temp.min} / {daily.temp.max} °C
+                {Math.round(daily.temp.min)} / {Math.round(daily.temp.max)} °C
               </span>
             </div>
             <span
