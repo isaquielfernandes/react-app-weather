@@ -8,7 +8,7 @@ const Weather = () => {
   return (
     <>
       {isError && (
-        <Alert variant="danger" dismissible className="my-2">
+        <Alert variant="danger" className="my-2">
           <Alert.Heading>Oh snap! You got an error!</Alert.Heading>
           <p>Please enter a Valid City name</p>
         </Alert>
