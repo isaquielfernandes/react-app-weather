@@ -9,6 +9,14 @@ export function getNextSevenDays() {
   return next7Days;
 }
 
+export const unixTimeToDateObject = (unixTimestamp) => {
+  const milliseconds = unixTimestamp * 1000;
+
+  const dateObject = new Date(milliseconds);
+
+  return dateObject;
+}
+
 export const unixTimeToDate = (unixTimestamp) => {
   const milliseconds = unixTimestamp * 1000;
 
@@ -20,11 +28,12 @@ export const unixTimeToDate = (unixTimestamp) => {
 }
 
 export const unixTimeToWeekDay = (unixTimestamp) => {
-  const milliseconds = unixTimestamp * 1000;
+  //const milliseconds = unixTimestamp * 1000;
 
-  const dateObject = new Date(milliseconds);
+  //const dateObject = new Date(milliseconds);
 
-  const humanDateFormat = dateObject.toLocaleString({weekday: "long", day: 'numeric'});
+  const humanDateFormat = unixTimeToDateObject(unixTimestamp)
+          .toLocaleString("en-US", {weekday: "long", day: 'numeric'});
 
   return humanDateFormat;
 }
