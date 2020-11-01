@@ -7,9 +7,9 @@ const Weather = () => {
 
   return (
     <>
-      {isError.message && (
+      {isError && (
         <Alert variant="danger" className="my-2">
-          <p>{isError.message}</p>
+          <p>{isError}</p>
         </Alert>
       )}
       {weather.temp ? (
