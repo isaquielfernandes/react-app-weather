@@ -24,7 +24,7 @@ export const unixTimeToDate = (unixTimestamp) => {
 export const unixTimeToWeekDay = (unixTimestamp) => {
  
   return unixTimeToDateObject(unixTimestamp)
-            .toLocaleString("en-CA", {weekday: "long", day: 'numeric'});
+            .toLocaleString("en-CA", {weekday: "long", day: '2-digit'});
 }
 
 export const unixTimeToHours = (unixTimestamp) => {
