@@ -9,8 +9,7 @@ const Weather = () => {
     <>
       {isError && (
         <Alert variant="danger" className="my-2">
-          <Alert.Heading>Oh snap! You got an error!</Alert.Heading>
-          <p>Please enter a Valid City name</p>
+          <p>{isError}</p>
         </Alert>
       )}
       {weather.temp ? (
