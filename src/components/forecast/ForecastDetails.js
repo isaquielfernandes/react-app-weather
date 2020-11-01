@@ -20,7 +20,7 @@ const ForecastDetails = ({ daily }) => {
           />
           <div data-v-1ab7fc2c>
             <p data-v-1ab7fc2c>{daily.weather[0].main}. Moderate breeze.</p>
-            <p data-v-1ab7fc2c>The high will be {daily.temp.max}°C, the low will be {daily.temp.min}°C.</p>
+            <p data-v-1ab7fc2c>The high will be {Math.round(daily.temp.max)}°C, the low will be {Math.round(daily.temp.min)}°C.</p>
           </div>
         </div>
         <ul
@@ -150,17 +150,17 @@ const ForecastDetails = ({ daily }) => {
             </tr>
             <tr data-v-1ab7fc2c>
               <td data-v-1ab7fc2c>Temperature</td>
-              <td data-v-1ab7fc2c> {daily.temp.morn}°C </td>
-              <td data-v-1ab7fc2c> {daily.temp.day}°C </td>
-              <td data-v-1ab7fc2c> {daily.temp.eve}°C </td>
-              <td data-v-1ab7fc2c> {daily.temp.night}°C </td>
+              <td data-v-1ab7fc2c> {Math.round(daily.temp.morn)}°C </td>
+              <td data-v-1ab7fc2c> {Math.round(daily.temp.day)}°C </td>
+              <td data-v-1ab7fc2c> {Math.round(daily.temp.eve)}°C </td>
+              <td data-v-1ab7fc2c> {Math.round(daily.temp.night)}°C </td>
             </tr>
             <tr data-v-1ab7fc2c>
               <td data-v-1ab7fc2c>Feels like</td>
-              <td data-v-1ab7fc2c> {daily.feels_like.morn}°C </td>
-              <td data-v-1ab7fc2c> {daily.feels_like.day}°C </td>
-              <td data-v-1ab7fc2c> {daily.feels_like.eve}°C </td>
-              <td data-v-1ab7fc2c> {daily.feels_like.night}°C </td>
+              <td data-v-1ab7fc2c> {Math.round(daily.feels_like.morn)}°C </td>
+              <td data-v-1ab7fc2c> {Math.round(daily.feels_like.day)}°C </td>
+              <td data-v-1ab7fc2c> {Math.round(daily.feels_like.eve)}°C </td>
+              <td data-v-1ab7fc2c> {Math.round(daily.feels_like.night)}°C </td>
             </tr>
           </tbody>
         </table>
