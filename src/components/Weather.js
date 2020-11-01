@@ -40,7 +40,7 @@ const Weather = () => {
           {weather.visibility && (
             <p className="m-1">
               <i className="fas fa-eye-slash"></i> Visibility:{" "}
-              {weather.visibility}
+              {weather.visibility} metre
             </p>
           )}
           {weather.wind_speed && (
