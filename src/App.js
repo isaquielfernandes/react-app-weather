@@ -13,9 +13,7 @@ const App = () => {
       <Container className="p-4 mb-3">
         <Search />
         <div className="row">
-          <div className="col-md-6 mx-auto">
-            <Weather />
-          </div>
+          <Weather />
         </div>
         <ForecastContainer />
       </Container>
