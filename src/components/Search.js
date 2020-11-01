@@ -17,8 +17,10 @@ const Search = () => {
     e.preventDefault();
     const { city } = e.target.elements;
     const cityValue = city.value;
-
-    dispatch(fetchWeatherFromApi(cityValue));
+  
+    if(cityValue){
+      dispatch(fetchWeatherFromApi(cityValue));
+    }
   };
 
   return (
