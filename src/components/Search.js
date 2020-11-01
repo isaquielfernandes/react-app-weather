@@ -4,6 +4,7 @@ import {
   Card,
   Form,
   InputGroup,
+  FormControl,
   Button,
   Row,
   Col
@@ -45,7 +46,7 @@ const Search = () => {
           <Form onSubmit={getWeatherByCityName}>
             <Form.Group>
               <InputGroup className="mb-3">
-                <Form.Control
+                <FormControl
                   type="text"
                   name="city"
                   placeholder="Search by City Name"
