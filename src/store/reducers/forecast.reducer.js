@@ -17,11 +17,12 @@ export default function (state = initialState, action) {
         ...state,
         weather: action.payload.weather,
         forecast: action.payload.forecast,
+        isError: null,
       };
     case "FETCH_WEATHER_ERROR":
       return {
         ...state,
-        isError: action.payload.error,
+        isError: 'Location invalid!',
       };
     default:
       return state;
