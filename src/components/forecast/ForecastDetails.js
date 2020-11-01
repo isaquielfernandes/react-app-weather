@@ -57,7 +57,7 @@ const ForecastDetails = ({ daily }) => {
               </g>
               
             </svg>
-            <span data-v-1b8538d2>{daily.clouds}</span>
+            <span data-v-1b8538d2>{daily.clouds} %</span>
           </li>
           <li data-v-1b8538d2>
             <div data-v-1b8538d2 className="wind-line">
@@ -79,8 +79,8 @@ const ForecastDetails = ({ daily }) => {
                     d="M817.2,990c-8.3,0-16.6-3.3-26.5-9.9L497.2,769.5c-5-3.3-18.2-3.3-23.2,0L210.3,976.7c-19.9,16.6-41.5,14.9-51.4,0c-6.6-9.9-8.3-21.6-3.3-38.1L449.1,39.8C459,13.3,477.3,10,483.9,10c6.6,0,24.9,3.3,34.8,29.8l325,898.7c5,14.9,5,28.2-1.7,38.1C837.1,985,827.2,990,817.2,990z M485.6,716.4c14.9,0,28.2,5,39.8,11.6l255.4,182.4L485.6,92.9l-267,814.2l223.9-177.4C454.1,721.4,469,716.4,485.6,716.4z"
                   />
                 </g>
-              </svg>{" "}
-              {daily.wind_deg}m/s SW{" "}
+              </svg>{' '}
+              {daily.wind_deg} /s SW{" "}
             </div>
           </li>
           <li data-v-1b8538d2>
@@ -118,25 +118,25 @@ const ForecastDetails = ({ daily }) => {
                 />
               </g>
             </svg>
-             {daily.pressure}hPa
+             {daily.pressure} hPa
           </li>
           <li data-v-1b8538d2>
             <span data-v-1b8538d2 className="symbol">
-              Humidity: {" "}
+              Humidity: {' '}
             </span>
-             {daily.humidity}%
+             {daily.humidity} %
           </li>
           <li data-v-1b8538d2>
             <span data-v-1b8538d2 className="symbol">
-              UV: {" "}
+              UV: {' '}
             </span>
              {daily.uvi}
           </li>
           <li data-v-1b8538d2>
             <span data-v-1b8538d2 className="symbol">
-              Dew point: {" "}
+              Dew point: {' '}
             </span>
-             {daily.dew_point}°C
+             {daily.dew_point} °C
           </li>
         </ul>
         <table data-v-1ab7fc2c>
