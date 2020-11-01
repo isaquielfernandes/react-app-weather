@@ -9,9 +9,19 @@ import {
   Col
 } from "react-bootstrap";
 import { fetchWeatherFromApi } from "../store/actions/forecastActions";
+//import { Link } from "react-router-dom";
 
 const Search = () => {
   const dispatch = useDispatch();
+ 
+  /*const [searchTerm, setSearchTerm] = useState('');
+
+  useEffect(() => {
+    if (!searchTerm) {
+      return;
+    }
+    
+  }, [searchTerm]);*/
 
   const getWeatherByCityName = (e) => {
     e.preventDefault();
@@ -31,14 +41,14 @@ const Search = () => {
              Forecast
            </h3>
         </Card.Title>
-        <Card.Body className="">
+        <Card.Body className="p-0">
           <Form onSubmit={getWeatherByCityName}>
             <Form.Group>
               <InputGroup className="mb-3">
                 <Form.Control
                   type="text"
                   name="city"
-                  placeholder="Search for the City Name"
+                  placeholder="Search by City Name"
                   autoFocus
                 />
                 <InputGroup.Append>
