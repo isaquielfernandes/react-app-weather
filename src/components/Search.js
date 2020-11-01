@@ -36,10 +36,10 @@ const Search = () => {
   return (
     <Row className="pt-5 mt-3">
       <Col md={{ span: 6, offset: 3 }}>
-        <Card.Title className="my-2">
-           <h3 data-v-3724b8e4="" className="text-center pt-2">
+        <Card.Title className="my-3">
+           <h2 data-v-3724b8e4="" className="text-center pt-2">
              Forecast
-           </h3>
+           </h2>
         </Card.Title>
         <Card.Body className="p-0">
           <Form onSubmit={getWeatherByCityName}>
