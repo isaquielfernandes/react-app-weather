@@ -82,7 +82,6 @@ const transformWeatherData = (res) => {
     city: res[0].name,
     lat: res[0].coord.lat,
     lon: res[0].coord.lon,
-    error: null,
   };
 
   return {  weather };
