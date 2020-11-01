@@ -3,14 +3,14 @@ import { useSelector } from "react-redux";
 import { Card, Alert, Badge } from "react-bootstrap";
 
 const Weather = () => {
-  const { weather } = useSelector((state) => state.forecast);
+  const { weather, isError } = useSelector((state) => state.forecast);
 
   return (
     <>
-      {weather.error && (
+      {isError && (
         <Alert variant="danger" dismissible className="my-2">
           <Alert.Heading>Oh snap! You got an error!</Alert.Heading>
-          <p>Please enter a City</p>
+          <p>Please enter a Valid City name</p>
         </Alert>
       )}
       {weather.temp ? (
