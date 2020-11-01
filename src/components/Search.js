@@ -24,6 +24,11 @@ const Search = () => {
   return (
     <Row className="pt-5 mt-3">
       <Col md={{ span: 6, offset: 3 }}>
+        <Card.Title className="my-2">
+           <h3 data-v-3724b8e4="" className="text-center pt-2">
+             Forecast
+           </h3>
+        </Card.Title>
         <Card.Body className="">
           <Form onSubmit={getWeatherByCityName}>
             <Form.Group>
