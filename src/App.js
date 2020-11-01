@@ -13,7 +13,7 @@ const App = () => {
       <Container className="p-4">
         <Search />
         <div className="row">
-          <div className="col-md-6 offset-3">
+          <div className="col-md-6 mx-auto">
             <Weather />
           </div>
         </div>
