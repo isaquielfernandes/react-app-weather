@@ -4,6 +4,7 @@ import { useSelector } from "react-redux";
 import ForecastItem from "./ForecastItem";
 
 const ForecastContainer = () => {
+
   const { forecast } = useSelector((state) => state.forecast);
   const variant = [
      'Primary',
@@ -18,7 +19,7 @@ const ForecastContainer = () => {
    
   return (
     <Row className="mt-3">
-      <Col>
+      <Col className="col-md-6 mx-auto">
         <div className="daily-container">
           <Accordion className="animated fadeInUp day-list">
             {forecast.daily.map((daily, idx) => (
