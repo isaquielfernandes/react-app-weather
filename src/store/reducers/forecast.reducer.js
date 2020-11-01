@@ -5,7 +5,7 @@ const initialState = {
     daily: [],
     hourly: []
   },
-  isError: false,
+  isError: null,
 };
 
 export default function (state = initialState, action) {
@@ -21,7 +21,7 @@ export default function (state = initialState, action) {
     case "FETCH_WEATHER_ERROR":
       return {
         ...state,
-        isError: true,
+        isError: action.payload.error.message,
       };
     default:
       return state;
