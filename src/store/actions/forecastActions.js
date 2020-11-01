@@ -56,7 +56,7 @@ export const fetchWeatherFromApi = (city) => {
         dispatch(setIsLoading(false));
       })
       .catch((err) => {
-        dispatch(fetchWeatherFail(err));
+        dispatch(fetchWeatherFail(err.message));
         dispatch(setIsLoading(false));
       }
     );
