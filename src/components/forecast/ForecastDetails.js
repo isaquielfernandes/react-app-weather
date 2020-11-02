@@ -19,7 +19,7 @@ const ForecastDetails = ({ daily }) => {
             className="weather-icon"
           />
           <div data-v-1ab7fc2c>
-            <p data-v-1ab7fc2c>{daily.weather[0].main}. Moderate breeze.</p>
+            <p data-v-1ab7fc2c>{daily.weather[0].description}.</p>
             <p data-v-1ab7fc2c>The high will be {Math.round(daily.temp.max)}°C, the low will be {Math.round(daily.temp.min)}°C.</p>
           </div>
         </div>
