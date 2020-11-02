@@ -18,7 +18,7 @@ export const unixTimeToDateObject = (unixTimestamp) => {
 export const unixTimeToDate = (unixTimestamp) => {
   
   return unixTimeToDateObject(unixTimestamp)
-            .toLocaleString("en-CA", {year: "numeric", month: "short", day: "2-digit", hour: "2-digit", minute: "2-digit" });
+            .toLocaleString("pt-PT", {year: "numeric", month: "short", day: "2-digit", hour: "2-digit", minute: "2-digit" });
 }
 
 export const unixTimeToWeekDay = (unixTimestamp) => {
