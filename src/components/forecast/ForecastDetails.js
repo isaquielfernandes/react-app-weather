@@ -80,7 +80,7 @@ const ForecastDetails = ({ daily }) => {
                   />
                 </g>
               </svg>{' '}
-              {daily.wind_deg} /s SW{" "}
+              {daily.wind_deg} m/s
             </div>
           </li>
           <li data-v-1b8538d2>
@@ -128,15 +128,14 @@ const ForecastDetails = ({ daily }) => {
           </li>
           <li data-v-1b8538d2>
             <span data-v-1b8538d2 className="symbol">
-              UV: {' '}
+              UV: {Math.round(daily.uvi)}
             </span>
-             {daily.uvi}
           </li>
           <li data-v-1b8538d2>
             <span data-v-1b8538d2 className="symbol">
               Dew point: {' '}
             </span>
-             {daily.dew_point} °C
+             {Math.round(daily.dew_point)} °C
           </li>
         </ul>
         <table data-v-1ab7fc2c>
