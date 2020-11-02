@@ -56,7 +56,7 @@ export const fetchWeatherFromApi = (city) => {
         dispatch(setIsLoading(false));
       })
       .catch((err) => {
-        dispatch(fetchWeatherFail(err));
+        dispatch(fetchWeatherFail(err.message));
         dispatch(setIsLoading(false));
       }
     );
@@ -66,23 +66,22 @@ export const fetchWeatherFromApi = (city) => {
 const transformWeatherData = (res) => {
   const weather = {
     dt: unixTimeToDate(res[0].dt),
-    temp: res[0].main.temp,
-    feels_like: res[0].main.feels_like,
+    temp: Math.round(res[0].main.temp),
+    feels_like: Math.round(res[0].main.feels_like),
     humidity: res[0].main.humidity,
     sunrise: res[0].sys.sunrise,
     sunset: res[0].sys.sunset,
     country: res[0].sys.country,
-    temp_min: res[0].main.temp_min,
-    temp_max: res[0].main.temp_max,
+    temp_min: Math.round(res[0].main.temp_min),
+    temp_max: Math.round(res[0].main.temp_max),
     main: res[0].weather[0].main,
-    icon: "http://openweathermap.org/img/w/" + res[0].weather[0].icon + ".png",
+    icon: "https://openweathermap.org/img/w/" + res[0].weather[0].icon + ".png",
     description: res[0].weather[0].description,
     visibility: res[0].visibility,
     wind_speed: res[0].wind.speed,
     city: res[0].name,
     lat: res[0].coord.lat,
     lon: res[0].coord.lon,
-    error: null,
   };
 
   return {  weather };

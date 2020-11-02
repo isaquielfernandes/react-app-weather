@@ -5,7 +5,7 @@ const initialState = {
     daily: [],
     hourly: []
   },
-  isError: false,
+  error: null,
 };
 
 export default function (state = initialState, action) {
@@ -17,11 +17,12 @@ export default function (state = initialState, action) {
         ...state,
         weather: action.payload.weather,
         forecast: action.payload.forecast,
+        error: null,
       };
     case "FETCH_WEATHER_ERROR":
       return {
         ...state,
-        isError: true,
+        error: 'Location invalid!',
       };
     default:
       return state;

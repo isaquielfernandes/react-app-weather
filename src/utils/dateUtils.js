@@ -9,24 +9,26 @@ export function getNextSevenDays() {
   return next7Days;
 }
 
-export const unixTimeToDate = (unixTimestamp) => {
+export const unixTimeToDateObject = (unixTimestamp) => {
   const milliseconds = unixTimestamp * 1000;
 
-  const dateObject = new Date(milliseconds);
+  return new Date(milliseconds);
+}
 
-  const humanDateFormat = dateObject.toLocaleString();
-
-  return humanDateFormat;
+export const unixTimeToDate = (unixTimestamp) => {
+  
+  return unixTimeToDateObject(unixTimestamp)
+            .toLocaleString("pt-PT", {year: "numeric", month: "short", day: "2-digit", hour: "2-digit", minute: "2-digit" });
 }
 
 export const unixTimeToWeekDay = (unixTimestamp) => {
-  const milliseconds = unixTimestamp * 1000;
-
-  const dateObject = new Date(milliseconds);
-
-  const humanDateFormat = dateObject.toLocaleString("en-US", {weekday: "long", day: 'numeric'});
-
-  return humanDateFormat;
+ 
+  return unixTimeToDateObject(unixTimestamp)
+            .toLocaleString("en-CA", {weekday: "long", day: '2-digit'});
 }
 
-
+export const unixTimeToHours = (unixTimestamp) => {
+  
+  return unixTimeToDateObject(unixTimestamp)
+            .toLocaleString("en-US", {hour: 'numeric', minute: 'numeric'});
+}
