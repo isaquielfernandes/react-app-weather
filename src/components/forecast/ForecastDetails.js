@@ -67,7 +67,7 @@ const ForecastDetails = ({ daily }) => {
                 enableBackground="new 0 0 1000 1000"
                 xmlSpace="preserve"
                 className="icon-wind-direction"
-                style={{ transform: "rotate(408deg)" }}
+                style={{ transform: `rotate(${daily.wind_deg}deg)` }}
               >
                 <g data-v-47880d39 fill="#48484a">
                   <path
@@ -80,7 +80,7 @@ const ForecastDetails = ({ daily }) => {
                   />
                 </g>
               </svg>{' '}
-              {daily.wind_deg} m/s
+              {daily.wind_speed} m/s
             </div>
           </li>
           <li data-v-1b8538d2>
