@@ -163,7 +163,7 @@ const ForecastDetails = ({ daily }) => {
         </table>
         <div data-v-1ab7fc2c className="item-container">
           <div data-v-2d771159 data-v-1ab7fc2c className="item">
-            <span data-v-2d771159 className="label badge badge-primary text-wrap">
+            <span data-v-2d771159 className="label badge badge-light text-wrap">
               Sunrise
             </span>
             <span data-v-2d771159 className="value">
@@ -171,7 +171,7 @@ const ForecastDetails = ({ daily }) => {
             </span>
           </div>
           <div data-v-2d771159 data-v-1ab7fc2c className="item">
-            <span data-v-2d771159 className="label badge badge-primary text-wrap">
+            <span data-v-2d771159 className="label badge badge-light text-wrap">
               Sunset
             </span>
             <span data-v-2d771159 className="value">
