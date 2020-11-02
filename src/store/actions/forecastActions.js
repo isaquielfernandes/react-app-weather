@@ -75,7 +75,7 @@ const transformWeatherData = (res) => {
     temp_min: Math.round(res[0].main.temp_min),
     temp_max: Math.round(res[0].main.temp_max),
     main: res[0].weather[0].main,
-    icon: "http://openweathermap.org/img/w/" + res[0].weather[0].icon + ".png",
+    icon: "https://openweathermap.org/img/w/" + res[0].weather[0].icon + ".png",
     description: res[0].weather[0].description,
     visibility: res[0].visibility,
     wind_speed: res[0].wind.speed,
