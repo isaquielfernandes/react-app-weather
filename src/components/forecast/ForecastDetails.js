@@ -122,9 +122,8 @@ const ForecastDetails = ({ daily }) => {
           </li>
           <li data-v-1b8538d2>
             <span data-v-1b8538d2 className="symbol">
-              Humidity: {' '}
+              Humidity: {daily.humidity} %
             </span>
-             {daily.humidity} %
           </li>
           <li data-v-1b8538d2>
             <span data-v-1b8538d2 className="symbol">
@@ -133,9 +132,8 @@ const ForecastDetails = ({ daily }) => {
           </li>
           <li data-v-1b8538d2>
             <span data-v-1b8538d2 className="symbol">
-              Dew point: {' '}
+              Dew point: {Math.round(daily.dew_point)}°C
             </span>
-             {Math.round(daily.dew_point)} °C
           </li>
         </ul>
         <table data-v-1ab7fc2c>
