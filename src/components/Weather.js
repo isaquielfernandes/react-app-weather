@@ -21,13 +21,13 @@ const Weather = () => {
             </p>
           )}
           {weather.city && (
-            <p className="m-1">
+            <p style={{ fontSize: "128px"}} className="m-1">
               <i className="fas fa-map-marked-alt"></i> Location: {weather.city}
               , {weather.country}
             </p>
           )}
           {weather.temp && (
-            <p className="m-1">
+            <p style={{ fontSize: "128px"}} className="m-1">
               <i className="fas fa-temperature-low"></i> Temperature:{" "}
               {weather.temp} ℃
             </p>
