@@ -10,7 +10,7 @@ const ForecastItem = ({ daily, variant }) => {
        text={variant.toLowerCase() === 'light' ? 'dark' : 'white'}
        className="mb-2">
       <Accordion.Toggle
-        as={Card.Header}
+        as={<Card.Header className="p-0"/>}
         variant="link"
         eventKey={daily.dt}
        >
