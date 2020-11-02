@@ -15,15 +15,15 @@ const Weather = () => {
       {weather.temp ? (
         <Card.Body className="card mt-2 animated fadeInUp">
           {weather.dt && (
-            <p className="m-1">
+            <p className="my-1">
               <i className="far fa-calendar-alt"></i> Day:{" "}
               <strong>{weather.dt}</strong>{" "}
             </p>
           )}
           {weather.temp && (
-            <p style={{ fontSize: "56px"}} className="mt-1 mb-0 pb-0">
+            <span style={{ fontSize: "56px"}} className="mt-1 mb-0 pb-0">
               {weather.temp}℃
-            </p>
+            </span>
           )}
           {weather.city && (
             <p style={{ fontSize: "40px"}} className="m-0 pt-0 font-weight-light">
