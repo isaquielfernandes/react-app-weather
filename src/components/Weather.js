@@ -16,8 +16,8 @@ const Weather = () => {
         <Card.Body className="card mt-2 animated fadeInUp">
           {weather.dt && (
             <p className="my-1">
-              <i className="far fa-calendar-alt"></i> Day:{" "}
-              <strong>{weather.dt}</strong>{" "}
+              <i className="far fa-calendar-alt"></i>{" "}
+              <strong>{weather.dt}</strong>
             </p>
           )}
           {weather.temp && (
@@ -26,7 +26,7 @@ const Weather = () => {
             </p>
           )}
           {weather.city && (
-            <p style={{ fontSize: "40px"}} className="my-0 p-0 font-weight-light">
+            <p style={{ fontSize: "40px", height:"2"}} className="my-0 p-0 font-weight-light">
               {weather.city}, {weather.country}
             </p>
           )}
