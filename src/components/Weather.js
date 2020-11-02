@@ -21,12 +21,12 @@ const Weather = () => {
             </p>
           )}
           {weather.temp && (
-            <span style={{ fontSize: "56px"}} className="mt-1 mb-0 pb-0">
+            <span style={{ fontSize: "50px"}} className="mt-1 mb-0 p-0">
               {weather.temp}℃
             </span>
           )}
           {weather.city && (
-            <p style={{ fontSize: "40px"}} className="m-0 pt-0 font-weight-light">
+            <p style={{ fontSize: "40px"}} className="my-0 p-0 font-weight-light">
               {weather.city}, {weather.country}
             </p>
           )}
