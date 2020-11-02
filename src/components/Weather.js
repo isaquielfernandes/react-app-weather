@@ -21,17 +21,17 @@ const Weather = () => {
             </p>
           )}
           {weather.temp && (
-            <p style={{ fontSize: "60px"}} className="m-1">
+            <p style={{ fontSize: "56px"}} className="my-1">
               {weather.temp}℃
             </p>
           )}
           {weather.city && (
-            <p style={{ fontSize: "48px"}} className="m-1">
+            <p style={{ fontSize: "40px"}} className="m-0 font-weight-light">
               {weather.city}, {weather.country}
             </p>
           )}
           {weather.humidity && (
-            <p className="m-1">
+            <p className="my-1">
               <i className="fas fa-water"></i> Humidity: {weather.humidity} %
             </p>
           )}
