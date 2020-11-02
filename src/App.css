@@ -40,13 +40,13 @@ li {
 }
 
 .daily-detail-container[data-v-1ab7fc2c] {
-  height: 280px;
+  height: 290px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   border-radius: 8pt;
   overflow-y: auto;
-  padding: 4pt;
+  padding: 8pt;
 }
 
 .standard-padding[data-v-1ab7fc2c] {
