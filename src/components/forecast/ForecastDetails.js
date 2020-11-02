@@ -20,7 +20,7 @@ const ForecastDetails = ({ daily }) => {
           />
           <div data-v-1ab7fc2c>
             <p data-v-1ab7fc2c className="text-capitalize">{daily.weather[0].description}.</p>
-            <p data-v-1ab7fc2c className="pr-1">The high will be {Math.round(daily.temp.max)}°C, the low will be {Math.round(daily.temp.min)}°C.</p>
+            <p data-v-1ab7fc2c className="mr-1">The high will be {Math.round(daily.temp.max)}°C, the low will be {Math.round(daily.temp.min)}°C.</p>
           </div>
         </div>
         <ul
