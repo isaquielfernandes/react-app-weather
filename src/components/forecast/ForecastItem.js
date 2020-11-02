@@ -8,7 +8,7 @@ const ForecastItem = ({ daily, variant }) => {
     <Card 
        bg={variant.toLowerCase()}
        text={variant.toLowerCase() === 'light' ? 'dark' : 'white'}
-       className="mb-2">
+       className="mb-2 p-1">
       <Accordion.Toggle
         as={Card.Header}
         variant="link"
