@@ -10,9 +10,10 @@ const ForecastItem = ({ daily, variant }) => {
        text={variant.toLowerCase() === 'light' ? 'dark' : 'white'}
        className="mb-2">
       <Accordion.Toggle
-        as={<Card.Header className="p-0"/>}
+        as={Card.Header}
         variant="link"
         eventKey={daily.dt}
+        className="p-0"
        >
         <li data-v-3724b8e4 className="my-1 py-1">
           <span data-v-3724b8e4>{unixTimeToWeekDay(daily.dt)}</span>
