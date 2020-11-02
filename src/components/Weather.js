@@ -22,7 +22,7 @@ const Weather = () => {
           )}
           {weather.temp && (
             <p style={{ fontSize: "46px"}} className="mt-1 mb-0 p-0">
-              {weather.temp}℃
+              {weather.temp}℃ {' '}  <img src={weather.icon} alt="" width={56} height={56} />
             </p>
           )}
           {weather.city && (
@@ -52,9 +52,8 @@ const Weather = () => {
           )}
           {weather.icon && (
             <div>
-              <hr className="m-0" />
-              <img src={weather.icon} alt="" width={56} height={56} />
-              <span>{weather.description}</span>
+              {/*<hr className="m-0" />
+              <span>{weather.description}</span>*/}
             </div>
           )}
         </Card.Body>
