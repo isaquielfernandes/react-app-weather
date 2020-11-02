@@ -8,7 +8,7 @@ const ForecastItem = ({ daily, variant }) => {
     <Card 
        bg={variant.toLowerCase()}
        text={variant.toLowerCase() === 'light' ? 'dark' : 'white'}
-       className="mb-2 p-1">
+       className="mb-2">
       <Accordion.Toggle
         as={Card.Header}
         variant="link"
@@ -26,7 +26,7 @@ const ForecastItem = ({ daily, variant }) => {
             >
               <img
                 data-v-3724b8e4
-                alt=""
+                alt="weather-icon"
                 src={`https://openweathermap.org/img/wn/${daily.weather[0].icon}.png`}
                 className="weather-icon"
               />
@@ -59,7 +59,7 @@ const ForecastItem = ({ daily, variant }) => {
         </li>
       </Accordion.Toggle>
       <Accordion.Collapse eventKey={daily.dt}>
-        <Card.Body>
+        <Card.Body className="p-0">
           <ForecastDetails daily={daily}/>
         </Card.Body>
       </Accordion.Collapse>
