@@ -11,7 +11,7 @@ const ForecastDetails = ({ daily }) => {
         className="daily-detail-container"
         data-v-4b61fb05
       >
-        <div data-v-1ab7fc2c className="top-section pr-1 mr-1">
+        <div data-v-1ab7fc2c className="top-section">
           <img
             data-v-1ab7fc2c
             alt="weather-icon"
