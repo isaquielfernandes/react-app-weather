@@ -10,7 +10,7 @@ const App = () => {
   return (
     <>
       <NavBar />
-      <Container className="d-flex w-100 h-100 p-3 mx-auto flex-column">
+      <Container className="h-100 p-3">
         <Search />
         <div className="row">
           <Weather />

@@ -1,5 +1,5 @@
 import React from "react";
-import { Card, Accordion, Button } from "react-bootstrap";
+import { Card, Accordion } from "react-bootstrap";
 import { unixTimeToWeekDay } from "../../utils/dateUtils";
 import ForecastDetails from "./ForecastDetails";
 
@@ -31,7 +31,7 @@ const ForecastItem = ({ daily, variant }) => {
                 src={`https://openweathermap.org/img/wn/${daily.weather[0].icon}.png`}
                 className="weather-icon"
               />
-              <span data-v-3724b8e4>
+              <span data-v-3724b8e4 style={{ width: 70}}>
                 {Math.round(daily.temp.min)} / {Math.round(daily.temp.max)} °C
               </span>
             </div>

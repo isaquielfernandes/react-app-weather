@@ -18,9 +18,9 @@ const ForecastDetails = ({ daily }) => {
             src={`https://openweathermap.org/img/wn/${daily.weather[0].icon}@2x.png`}
             className="weather-icon"
           />
-          <div data-v-1ab7fc2c>
+          <div data-v-1ab7fc2c >
             <p data-v-1ab7fc2c className="text-capitalize">{daily.weather[0].description}.</p>
-            <p data-v-1ab7fc2c>The high will be {Math.round(daily.temp.max)}°C, the low will be {Math.round(daily.temp.min)}°C.</p>
+            <p data-v-1ab7fc2c className="mr-0 pr-1">The high will be {Math.round(daily.temp.max)}°C, the low will be {Math.round(daily.temp.min)}°C.</p>
           </div>
         </div>
         <ul
