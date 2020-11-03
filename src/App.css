@@ -83,6 +83,7 @@ table td[data-v-1ab7fc2c], table th[data-v-1ab7fc2c] {
 *[data-v-1ab7fc2c] {
   box-sizing: border-box;
 }
+
 th {
   text-align: left;
 }
@@ -188,9 +189,6 @@ svg:not(:root) {
   margin-bottom: 5px;
 }
 
-*[data-v-1ab7fc2c] {
-  box-sizing: border-box;
-}
 p {
   margin: revert;
 }
