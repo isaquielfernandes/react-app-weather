@@ -35,7 +35,6 @@ export const fetchWeatherFromApi = (city) => {
   return (dispatch) => {
     dispatch(setIsLoading(true));
     dispatch(fetchWeatherStart());
-
     Promise.all([fetchWeatherData(city)])
       .then((res) => {
         return Promise.all([res[0].json()]);
@@ -44,13 +43,11 @@ export const fetchWeatherFromApi = (city) => {
         const  { weather }  = transformWeatherData(res);
         const request = await fetchWeatherOneCallData(weather.lat, weather.lon);
         const data = await request.json();
-        
         const forecast = {
           current: data.current,
           daily: [...data.daily],
           hourly: [...data.hourly]
         }
-
         dispatch(fetchWeatherSuccess(weather, forecast));
         dispatch(setIsInitialState(false));
         dispatch(setIsLoading(false));
@@ -83,6 +80,5 @@ const transformWeatherData = (res) => {
     lat: res[0].coord.lat,
     lon: res[0].coord.lon,
   };
-
   return {  weather };
 };
