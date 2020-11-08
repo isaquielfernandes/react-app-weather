@@ -3,7 +3,7 @@ import './footer.css'
 
 const Footer = () => {
   return (
-    <footer className="p3">
+    <footer className="footer p3">
       <hr/>
       {'Copyright © '}
       <span className="p-1 m-1 text-center">By Isaquiel Fernandes</span>
