@@ -1,19 +1,19 @@
-export function kelvinToCelcius(num) {
-  return Math.round(num - 273.15);
+export function kelvinToCelcius(tempKelvin) {
+  return Math.round(tempKelvin - 273.15);
 }
 
-export function celciusToFahrenheit(c) {
-  return Math.round(c * (9 / 5) + 32);
+export function celciusToFahrenheit(tempCelcius) {
+  return Math.round(tempCelcius * (9 / 5) + 32);
 }
 
-export function fahrenheitToCelcius(f) {
-  return Math.round(((f - 32) * 5) / 9);
+export function fahrenheitToCelcius(tempFahrenheit) {
+  return Math.round(((tempFahrenheit - 32) * 5) / 9);
 }
 
-export function kmToMile(n) {
-  return Math.round(n / 1.60934);
+export function kmToMile(km) {
+  return Math.round(km / 1.60934);
 }
 
-export function mileToKm(n) {
-  return Math.round(n * 1.60934);
+export function mileToKm(mile) {
+  return Math.round(mile * 1.60934);
 }
