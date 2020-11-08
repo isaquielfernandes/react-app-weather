@@ -5,7 +5,7 @@ import ForecastDetails from "./ForecastDetails";
 
 const ForecastItem = ({ daily, variant }) => {
   return (
-    <Card.Body 
+    <Card
        bg={variant.toLowerCase()}
        text={variant.toLowerCase() === 'light' ? 'dark' : 'white'}
        className="mb-2 p-0">
@@ -62,7 +62,7 @@ const ForecastItem = ({ daily, variant }) => {
       <Accordion.Collapse eventKey={daily.dt}>
         <ForecastDetails daily={daily}/>
       </Accordion.Collapse>
-    </Card.Body>
+    </Card>
   );
 };
 
