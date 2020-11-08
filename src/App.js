@@ -11,7 +11,7 @@ const App = () => {
   return (
     <>
       <NavBar />
-      <Container style={{ minHeight: "100vh" }} className="p-3">
+      <Container style={{ minHeight: "80vh" }} className="p-3">
         <Search />
         <div className="row">
           <Weather />
