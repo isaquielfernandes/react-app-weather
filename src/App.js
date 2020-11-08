@@ -13,7 +13,7 @@ const App = () => {
       <NavBar />
       <Container style={{ minHeight: "70vh" }} className="p-3">
         <Search />
-        <div className="row">
+        <div className="row align-items-center">
           <Weather />
         </div>
         <ForecastContainer />
