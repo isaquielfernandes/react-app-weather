@@ -11,24 +11,20 @@ export function getNextSevenDays() {
 
 export const unixTimeToDateObject = (unixTimestamp) => {
   const milliseconds = unixTimestamp * 1000;
-
   return new Date(milliseconds);
 }
 
 export const unixTimeToDate = (unixTimestamp) => {
-  
   return unixTimeToDateObject(unixTimestamp)
-            .toLocaleString("pt-PT", {year: "numeric", month: "short", day: "2-digit", hour: "2-digit", minute: "2-digit" });
+    .toLocaleString("pt-PT", {year: "numeric", month: "short", day: "2-digit", hour: "2-digit", minute: "2-digit" });
 }
 
 export const unixTimeToWeekDay = (unixTimestamp) => {
- 
   return unixTimeToDateObject(unixTimestamp)
-            .toLocaleString("en-CA", {weekday: "long", day: '2-digit'});
+    .toLocaleString("en-CA", {weekday: "long", day: '2-digit'});
 }
 
 export const unixTimeToHours = (unixTimestamp) => {
-  
   return unixTimeToDateObject(unixTimestamp)
-            .toLocaleString("en-US", {hour: 'numeric', minute: 'numeric'});
+    .toLocaleString("en-US", {hour: 'numeric', minute: 'numeric'});
 }
