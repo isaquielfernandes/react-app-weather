@@ -27,35 +27,34 @@ const Weather = () => {
             </p>
           )}
           {weather.city && (
-            <p style={{ fontSize: "40px", height:"2"}} className="my-0 p-0 font-weight-light">
+            <p style={{ fontSize: "40px" }} className="my-0 p-0 font-weight-light">
               {weather.city}, {weather.country}
             </p>
           )}
+          <div className="border-left border-warning">
           {weather.humidity && (
             <p className="my-1">
               <i className="fas fa-water"></i> Humidity: {weather.humidity} %
             </p>
           )}
           {weather.visibility && (
-            <p className="m-1">
+            <p className="my-1">
               <i className="fas fa-eye-slash"></i> Visibility:{" "}
               {weather.visibility} metre
             </p>
           )}
           {weather.wind_speed && (
-            <p className="m-1">
+            <p className="my-1">
               <i className="fas fa-wind"></i> Wind Speed: {weather.wind_speed}{" "}
               metre/sec
             </p>
           )}
+          </div>
           {weather.feels_like && (
             <Badge variant="warning"> Feels Like: {weather.feels_like} ℃</Badge>
           )}
           {weather.icon && (
-            <div>
-              {/*<hr className="m-0" />
-              <span>{weather.description}</span>*/}
-            </div>
+            <span>{weather.description}</span>*/}
           )}
         </Card.Body>
       ) : (
