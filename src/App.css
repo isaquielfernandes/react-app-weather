@@ -55,7 +55,7 @@ li {
 }
 
 .text-container[data-v-1ab7fc2c] {
-  max-width: 440px;
+  max-width: 400px;
 }
 
 .orange-side[data-v-1ab7fc2c] {
@@ -90,10 +90,6 @@ table td[data-v-1ab7fc2c], table th[data-v-1ab7fc2c] {
 
 th {
   text-align: left;
-}
-
-td {
-  text-align: center;
 }
 
 img {
