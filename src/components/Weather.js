@@ -6,7 +6,7 @@ const Weather = () => {
   const { weather, error } = useSelector((state) => state.forecast);
 
   return (
-    <Row className="">
+    <Row >
     <Col className="col-md-6 mx-auto">
       {error && (
         <Alert variant="warning" className="my-2">
