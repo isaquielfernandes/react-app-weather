@@ -1,6 +1,11 @@
+* {
+  box-sizing: border-box;
+}
+
 *[data-v-3724b8e4] {
   box-sizing: border-box;
 }
+
 .daily-container .day-list li .day-list-values[data-v-3724b8e4] {
   display: flex;
   justify-content: space-between;
