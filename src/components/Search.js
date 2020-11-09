@@ -47,7 +47,6 @@ const Search = () => {
                   type="text"
                   name="city"
                   placeholder="Search by City Name"
-                  autoFocus
                 />
                 <InputGroup.Append>
                   <Button variant="outline-secondary" type="submit">
