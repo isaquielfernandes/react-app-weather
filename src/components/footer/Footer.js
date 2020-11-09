@@ -4,7 +4,7 @@ import './footer.css'
 const Footer = () => {
   return (
     <footer className="footer">
-      <hr/>
+      <hr className="mt-0 pt-0"/>
       <div className="p-2 mt-2">
         {'Copyright © '}
         <span className="py-1 my-1">By Isaquiel Fernandes</span>
