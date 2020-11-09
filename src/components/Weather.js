@@ -53,9 +53,6 @@ const Weather = () => {
           {weather.feels_like && (
             <Badge variant="warning"> Feels Like: {weather.feels_like} ℃</Badge>
           )}
-          {weather.icon && (
-            <span>{weather.description}</span>*/}
-          )}
         </Card.Body>
       ) : (
        null
