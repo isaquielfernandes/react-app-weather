@@ -35,7 +35,7 @@ const Search = () => {
     <Row className="align-items-center">
       <Col className="col-md-6 mx-auto">
         <Card.Title className="my-3 p-0">
-           <h2 data-v-3724b8e4="" className="text-center display-3 pt-2">
+           <h2 data-v-3724b8e4="" className="text-center text-primary display-3 pt-2">
              Forecast
            </h2>
         </Card.Title>
