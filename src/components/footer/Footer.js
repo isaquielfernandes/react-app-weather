@@ -6,7 +6,7 @@ const Footer = () => {
     <footer className="footer p-3 mb-1">
       <hr/>
       {'Copyright © '}
-      <span className="p-1 m-1 text-center">By Isaquiel Fernandes</span>
+      <span className="py-1 my-1">By Isaquiel Fernandes</span>
       {new Date().getFullYear()}
       {'.'}
     </footer>
