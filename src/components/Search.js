@@ -34,8 +34,8 @@ const Search = () => {
   return (
     <Row className="pt-5 mt-3 align-items-center">
       <Col md={{ span: 6, offset: 3 }}>
-        <Card.Title className="my-3">
-           <h2 data-v-3724b8e4="" className="text-center display-2 pt-2">
+        <Card.Title className="my-3 p-0">
+           <h2 data-v-3724b8e4="" className="text-center display-3 pt-2">
              Forecast
            </h2>
         </Card.Title>
