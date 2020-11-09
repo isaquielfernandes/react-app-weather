@@ -4,10 +4,11 @@ import { unixTimeToWeekDay } from "../../utils/dateUtils";
 import ForecastDetails from "./ForecastDetails";
 
 const ForecastItem = ({ daily, variant }) => {
+  const textColor = variant.toLowerCase() === 'light' ? 'dark' : 'white';
   return (
     <Card
        bg={variant.toLowerCase()}
-       text={variant.toLowerCase() === 'light' ? 'dark' : 'white'}
+       text={ textColor }
        className="mb-2 p-0">
       <Accordion.Toggle
         as={Card.Header}
@@ -38,7 +39,7 @@ const ForecastItem = ({ daily, variant }) => {
             <span
               data-v-3724b8e4
               className="sub"
-              style={{ width: 70, textAlign: "right", color: variant.toLowerCase() === 'light' ? 'dark' : 'white' }}
+              style={{ width: 70, textAlign: "right", color: textColor }}
             >
               {daily.weather[0].description}
             </span>
