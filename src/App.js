@@ -9,9 +9,9 @@ import Footer from "./components/footer/Footer";
 
 const App = () => {
   return (
-    <div style={{ minHeight: "70vh" }}>
+    <div style={{ minHeight: "100vh" }}>
       <NavBar />
-      <Container >
+      <Container style={{ minHeight: "70%" }}>
         <Search />
         <Weather />
         <ForecastContainer />
