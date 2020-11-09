@@ -13,9 +13,7 @@ const App = () => {
       <NavBar />
       <Container style={{ minHeight: "70vh" }} className="">
         <Search />
-        <div className="row">
-          <Weather />
-        </div>
+        <Weather />
         <ForecastContainer />
       </Container>
       <Footer />
