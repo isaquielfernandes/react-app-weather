@@ -1,5 +1,4 @@
 import React from "react";
-//import PropTypes from "prop-types";
 import { unixTimeToHours } from "../../utils/dateUtils";
 
 const ForecastDetails = ({ daily }) => {
@@ -161,7 +160,7 @@ const ForecastDetails = ({ daily }) => {
             </tr>
           </tbody>
         </table>
-        <div data-v-1ab7fc2c className="item-container">
+        <div data-v-1ab7fc2c className="item-container mt-1">
           <div data-v-2d771159 data-v-1ab7fc2c className="item">
             <span data-v-2d771159 className="label badge badge-light text-wrap">
               Sunrise
