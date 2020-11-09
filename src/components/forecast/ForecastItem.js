@@ -37,7 +37,7 @@ const ForecastItem = ({ daily, variant }) => {
             </div>
             <span
               data-v-3724b8e4
-              className="sub"
+              className="sub badge badge-light"
               style={{ width: 70, textAlign: "right" }}
             >
               {daily.weather[0].description}
