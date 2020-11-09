@@ -135,7 +135,7 @@ const ForecastDetails = ({ daily }) => {
             </span>
           </li>
         </ul>
-        <table data-v-1ab7fc2c>
+        <table data-v-1ab7fc2c className="table table-sm">
           <tbody>
             <tr data-v-1ab7fc2c>
               <th data-v-1ab7fc2c />
