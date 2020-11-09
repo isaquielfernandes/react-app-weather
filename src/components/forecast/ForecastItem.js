@@ -37,8 +37,8 @@ const ForecastItem = ({ daily, variant }) => {
             </div>
             <span
               data-v-3724b8e4
-              className={`sub + ' ' + ${variant.toLowerCase() === 'light' ? 'dark' : 'white'}`}
-              style={{ width: 70, textAlign: "right" }}
+              className="sub"
+              style={{ width: 70, textAlign: "right", color: variant.toLowerCase() === 'light' ? 'dark' : 'white' }}
             >
               {daily.weather[0].description}
             </span>
