@@ -14,23 +14,20 @@ import { fetchWeatherFromApi } from "../store/actions/forecastActions";
 
 const Search = () => {
   const dispatch = useDispatch();
- 
   /*const [searchTerm, setSearchTerm] = useState('');
 
   useEffect(() => {
     if (!searchTerm) {
       return;
     }
-    
   }, [searchTerm]);*/
 
   const getWeatherByCityName = (e) => {
     e.preventDefault();
     const { city } = e.target.elements;
-    const cityValue = city.value;
-  
-    if(cityValue){
-      dispatch(fetchWeatherFromApi(cityValue));
+    const cityName = city.value;
+    if(cityName){
+      dispatch(fetchWeatherFromApi(cityName));
     }
   };
 
@@ -38,7 +35,7 @@ const Search = () => {
     <Row className="pt-5 mt-3 align-items-center">
       <Col md={{ span: 6, offset: 3 }}>
         <Card.Title className="my-3">
-           <h2 data-v-3724b8e4="" className="text-center pt-2">
+           <h2 data-v-3724b8e4="" className="text-center display-2 pt-2">
              Forecast
            </h2>
         </Card.Title>
