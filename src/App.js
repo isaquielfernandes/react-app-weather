@@ -11,14 +11,12 @@ const App = () => {
   return (
     <>
       <NavBar />
-      <Container style={{ minHeight: "70vh" }} className="p-3">
-        <div className="align-items-center">
+      <Container style={{ minHeight: "70vh" }} className="">
         <Search />
         <div className="row">
           <Weather />
         </div>
         <ForecastContainer />
-        </div>
       </Container>
       <Footer />
     </>
