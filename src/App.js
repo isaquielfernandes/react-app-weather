@@ -11,7 +11,7 @@ const App = () => {
   return (
     <div style={{ minHeight: "100vh" }}>
       <NavBar />
-      <Container style={{ minHeight: "70%" }}>
+      <Container style={{ minHeight: "60vh" }}>
         <Search />
         <Weather />
         <ForecastContainer />
