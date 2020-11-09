@@ -67,6 +67,10 @@ li {
   height: 50px;
 }
 
+.table-responsive {
+  overflow-x:auto;
+}
+
 table {
   border-collapse: collapse;
   border-spacing: 0;
