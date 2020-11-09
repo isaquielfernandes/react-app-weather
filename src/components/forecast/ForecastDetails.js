@@ -135,7 +135,6 @@ const ForecastDetails = ({ daily }) => {
             </span>
           </li>
         </ul>
-        <div className="table-responsive">
         <table data-v-1ab7fc2c className="">
           <tbody>
             <tr data-v-1ab7fc2c>
@@ -161,7 +160,6 @@ const ForecastDetails = ({ daily }) => {
             </tr>
           </tbody>
         </table>
-        </div>
         <div data-v-1ab7fc2c className="item-container mt-1">
           <div data-v-2d771159 data-v-1ab7fc2c className="item">
             <span data-v-2d771159 className="label badge badge-light text-wrap">
