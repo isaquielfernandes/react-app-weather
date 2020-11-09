@@ -20,7 +20,7 @@ const ForecastContainer = () => {
   return (
     <Row className="mt-3">
       <Col className="col-md-6 mx-auto">
-        <div style={{ fontSize: '75%' }} className="daily-container">
+        <div style={{ fontSize: '80%' }} className="daily-container">
           <Accordion className="animated fadeInUp day-list">
             {forecast.daily.map((daily, idx) => (
               <ForecastItem key={idx} daily={daily} variant={variant[idx]} />
