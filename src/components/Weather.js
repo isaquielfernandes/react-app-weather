@@ -1,11 +1,12 @@
 import React from "react";
 import { useSelector } from "react-redux";
-import { Card, Alert, Badge, Col } from "react-bootstrap";
+import { Card, Alert, Badge, Col, Row } from "react-bootstrap";
 
 const Weather = () => {
   const { weather, error } = useSelector((state) => state.forecast);
 
   return (
+    <Row>
     <Col className="col-md-6 mx-auto">
       {error && (
         <Alert variant="warning" className="my-2">
@@ -61,6 +62,7 @@ const Weather = () => {
        null
       )}
     </Col>
+    </Row>
   );
 };
 
