@@ -59,7 +59,7 @@ li {
 }
 
 .orange-side[data-v-1ab7fc2c] {
-  border-left: 2px solid #eb6e4b;
+  border-left: 1px solid #eb6e4b;
 }
 
 .weather-icon {
@@ -77,7 +77,7 @@ table {
 }
 
 table th[data-v-1ab7fc2c] {
-  font-weight: 300;
+  font-weight: 400;
 }
 
 table td[data-v-1ab7fc2c], table th[data-v-1ab7fc2c] {
