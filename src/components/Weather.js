@@ -22,9 +22,9 @@ const Weather = () => {
             </p>
           )}
           {weather.temp && (
-            <p style={{ fontSize: "46px"}} className="mt-1 mb-0 p-0">
-              {weather.temp}℃ {' '}  
-            </p>
+            <span style={{ fontSize: "46px"}} className="my-0 p-0">
+              {weather.temp}℃ {' '}  <img src={weather.icon} alt="" width={46} height={46} />
+            </span>
           )}
           {weather.city && (
             <p style={{ fontSize: "40px" }} className="my-0 p-0 font-weight-light">
