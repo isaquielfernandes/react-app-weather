@@ -23,7 +23,7 @@ const Weather = () => {
           )}
           {weather.temp && (
             <p style={{ fontSize: "46px"}} className="mt-1 mb-0 p-0">
-              {weather.temp}℃ {' '}  <img src={weather.icon} alt="" width={56} height={56} />
+              {weather.temp}℃ {' '}  
             </p>
           )}
           {weather.city && (
