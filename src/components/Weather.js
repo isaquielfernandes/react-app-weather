@@ -31,7 +31,7 @@ const Weather = () => {
               {weather.city}, {weather.country}
             </p>
           )}
-          <div className="border-left border-warning">
+          <div className="border-left border-warning pl-1 mb-1">
           {weather.humidity && (
             <p className="my-1">
               <i className="fas fa-water"></i> Humidity: {weather.humidity} %
