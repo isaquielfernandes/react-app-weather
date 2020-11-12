@@ -44,7 +44,7 @@ const Weather = () => {
             </p>
           )}
           {weather.wind_speed && (
-            <p className="mt-1">
+            <p className="mt-1 mb-0">
               <i className="fas fa-wind"></i> Wind Speed: {weather.wind_speed}{" "}
               metre/sec
             </p>
