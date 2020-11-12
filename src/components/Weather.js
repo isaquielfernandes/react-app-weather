@@ -33,7 +33,7 @@ const Weather = () => {
           )}
           <div className="border-left border-warning pl-1 mb-1">
           {weather.humidity && (
-            <p className="my-1">
+            <p className="mb-1 mt-0">
               <i className="fas fa-water"></i> Humidity: {weather.humidity} %
             </p>
           )}
@@ -44,7 +44,7 @@ const Weather = () => {
             </p>
           )}
           {weather.wind_speed && (
-            <p className="my-1">
+            <p className="mt-1">
               <i className="fas fa-wind"></i> Wind Speed: {weather.wind_speed}{" "}
               metre/sec
             </p>
